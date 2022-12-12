@@ -1,0 +1,5 @@
+var name = 'engelich'
+const aname = 'engelichc'
+let aaname = 26
+
+console.log(name)

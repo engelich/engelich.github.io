@@ -89,17 +89,23 @@ body{
 .frame__content h5 {
   transform: translateX(50%);
 }
+
+.button:hover{
+  text-shadow: 0 0 1vh black;
+}
 .button__btn{
+  display: flex;
   transform: translateX(50%);
   font-weight: 600;
+  padding: 1vh 2vh;
+  background-color: white;
+  border-radius: 5vh;
+  border: 1px white solid;
   cursor: pointer;
-  color: orange;
+  color: black;
   transition: all 0.2s linear;
 }
-.button__btn:hover{
-  color: red;
-  text-shadow: 0 0 20px red;
-}
+
 .frame__content-left h1{
   transform: translateX(-50%);
   font-weight: 600;
@@ -107,14 +113,28 @@ body{
 .frame__content-left h5 {
   transform: translateX(-50%);
 }
-.button__btn-left{
+
+.button-left{
+  display: flex;
+  flex-direction: row-reverse;
   transform: translateX(-50%);
   font-weight: 600;
+  z-index: 3;
+  padding: 1vh 2vh;
+  background-color: white;
+  border-radius: 5vh;
+  border: 1px white solid;
   cursor: pointer;
-  color: orange;
+  color: black;
   transition: all 0.2s linear;
 }
-.button__btn-left:hover{
-  color: red;
-  text-shadow: 0 0 20px red;
+.button-left:hover{
+text-shadow: 0 0 1vh black;
+}
+.button__btn-left{
+  display: flex;
+  margin-right: 1vh;
+}
+.frame__content {
+  z-index: 1;
 }

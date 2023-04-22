@@ -553,8 +553,9 @@ left: 50%;
 .footer__info-item ,a{
   color: #ffffff;
 }
-.menu-mobile{
-  display: none;
+.menu-mobile,
+.menu-btn {
+   display: none;
 }
 .hyi_open{
   display: none;
@@ -577,8 +578,6 @@ left: 50%;
    margin-right: auto;
    margin-left: auto;
    padding-left: 0px;
-   
-    
   }
   .logo-img{
     width: 50px;
@@ -598,9 +597,7 @@ left: 50%;
     font-size: 32px;
   }
 }
-.menu-btn{
-  display: none;
-}
+
 @media(max-width:1000px){
   .evo-white__inner::after {
     content: '';
@@ -724,11 +721,12 @@ left: 50%;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #000000;
+    background: rgba(0, 0, 0, 0.9);
     height: 100vh;
     z-index: 5;
     text-align: center;
     padding-top: 140px;
+    
   }
   .menu-link{
     color: white;

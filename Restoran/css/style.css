@@ -677,35 +677,56 @@ body {
       }
       .burger-menu{
         display: block;
-        
-
+        z-index: 10;
       }
-
+      .burger-slide{
+        display: none;
+      }
+      
       button{
         border: none;
         outline: none;
         background-color: transparent;
+        z-index: 10;
+      }
+      .burger-img{
+        z-index: 10;
+      }
+      .button-menu{
+        z-index: 10;
+        position: relative;
         
       }
-
       .disp{
-        display: none;
+        font-size: 3vh;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 0;
+        padding-bottom: 5vh;
+        padding-top: 5vh;
+        gap: 2vh;
+        background-color: rgba(0, 0, 0, 0.9) ;
+        text-align: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
       }
-
+      .nav-itm{
+        font-size: 5vh;
+        padding: 5vh;
+      }
       .block{
         display: block;
       }
-
-      
       .gal{
         font-size: 50px;
         display: block;
         margin-top: 40px;
       }
-
-     
-
-
       .nav,
       .cart,
       .phone,

@@ -620,6 +620,12 @@ body {
         .burger-img{
           transform: scale(1.2);
         }
+
+        .galery-adaptiv{
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+        }
        
         .cook-slider{
           display: flex;
@@ -662,8 +668,7 @@ body {
       
 
       .img-gal,
-      .galery-up,
-      .galery-down {
+      {
         display: block;
         margin-left: auto;
         margin-right: auto;

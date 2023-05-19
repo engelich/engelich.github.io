@@ -167,13 +167,13 @@ li{
 }
 .info__text{
   font-family: 'Roboto Condensed', sans-serif;
-  width: 439px;
+  max-width: 439px;
   font-size: 14px;
   font-weight: 400px;
   
 }
 .info__text__right{
-  width: 455px;
+  max-width: 455px;
   font-weight: 700;
   
 }
@@ -190,7 +190,7 @@ align-items: center;
   justify-content: space-between;
 }
 .block__trofey{
-width: 438px;
+  max-width: 438px;
 }
 .title__trofey{
   font-size: 32px;
@@ -272,10 +272,14 @@ font-weight: 400;
   justify-content: center;
   margin-top: 250px;
   padding-bottom: 90px;
-  background: none;
+  background: none; 
+  position: relative;
+  max-width: 745px;
+  
 }
 .track img{
   background: none;
+  max-width: 100%;
 }
 .evo{
   font-size: 14px;
@@ -379,20 +383,24 @@ max-width: 487px;
 max-width: 590px;
 }
 .evo-white__video{
-  max-width: 900px;
-  max-height: 258px;
   margin-top: 100px;
   background-image: url(../img/evo-video.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  height: 350px;
+  background-size: contain;
+  background-size: 100%;
   display: flex;
+  height: 100%;
   justify-content: center;
   align-items: center;
   text-align: center;
   margin-bottom: 100px;
+  position: relative;
   
+}
+.evo-white__video-link{
+  padding: 12% 0;
+ 
 }
 .evo-white__video-link:hover{
   text-shadow: 0px 0px 15px #ffffff;
@@ -401,6 +409,7 @@ max-width: 590px;
 .evo-white__video-link span{
   display: block;
   color: #ffffff;
+ 
 }
 
 
@@ -553,9 +562,8 @@ left: 50%;
 .footer__info-item ,a{
   color: #ffffff;
 }
-.menu-mobile,
-.menu-btn {
-   display: none;
+.menu-mobile{
+  display: none;
 }
 .hyi_open{
   display: none;
@@ -578,6 +586,8 @@ left: 50%;
    margin-right: auto;
    margin-left: auto;
    padding-left: 0px;
+   
+    
   }
   .logo-img{
     width: 50px;
@@ -597,7 +607,9 @@ left: 50%;
     font-size: 32px;
   }
 }
-
+.menu-btn{
+  display: none;
+}
 @media(max-width:1000px){
   .evo-white__inner::after {
     content: '';
@@ -620,7 +632,11 @@ left: 50%;
 }
 
 @media(max-width:910px){
- 
+   .track__image{
+    margin-right: auto;
+    margin-left: auto;
+   }
+  
   .blog-quote__flex{
     display: block;
     text-align: center;
@@ -633,7 +649,10 @@ left: 50%;
     margin: 0 auto;
     text-align: center;
   }
-  
+  .track__image{
+    display: block;
+    max-width: 700px;
+  }
 
   .up-blog__qute{
     margin-right: auto;
@@ -674,9 +693,7 @@ left: 50%;
     display: flex;
     justify-content: center;
   }
-  .track img{
-    max-width: 439px;
-  }
+  
   .track_title{
     text-align: center;
   }
@@ -687,11 +704,11 @@ left: 50%;
     margin-bottom: -200px;
     
   }
- 
+  .evo-white__video{
+    margin-top: -20px;
+    margin-bottom: -20px;
+  }
 }
-
-
-
 @media(max-width:825px){
   .menu-btn{
     display: flex;
@@ -721,12 +738,11 @@ left: 50%;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background-color: #000000;
     height: 100vh;
     z-index: 5;
     text-align: center;
     padding-top: 140px;
-    
   }
   .menu-link{
     color: white;
@@ -746,9 +762,10 @@ left: 50%;
     background-size: cover;
     
   }
- 
+  
 }
 @media(max-width:756px){
+  
   .evo-black__img{
     max-width: 600px;
   }
@@ -823,22 +840,16 @@ display: none;
     margin: 0 auto;
   }
   
-  .info__text {
-    max-width: 300px;
-    font-size: 18px;
-  }
+
+  
   .part__img{
-    max-width: 250px;
+    max-width: 100%;
     margin-right: auto;
     margin-left: auto;
-    
   }
-  .info__title{
-    font-size: 40px;
-    max-width: 320px;
-  }
+ 
   .trofey__img{
-    max-width: 250px;
+    max-width: 100%;
     margin-right: auto;
     margin-left: auto;
   }
@@ -848,12 +859,9 @@ display: none;
   .evo-black__img{
     max-width: 100%;
   }
-  .block__trofey{
-    max-width: 337px;
+  .quote__img{
+    max-width: 250px;
   }
- .quote__img{
-  max-width: 250px;
- }
  
  .footer__bottom{
   text-align: center;
@@ -863,30 +871,9 @@ display: none;
   max-width: 100%;
  }
 }
-@media(max-width:400px){
-  .info__text {
-    font-size: 15px;
-    max-width: 250px;
-  }
-  .info__title{
-    font-size: 30px;
-    max-width: 250px;
-    
-  }
-  .title__trofey{
-    font-size: 30px;
-    max-width: 200px;
-  }
-  .text__trofey{
-    max-width: 200px;
-    font-size: 15px;
-   
-  }
-  .block__trofey{
-    max-width: 200px;
-    margin: 0 auto;
-  }
-}
+
+
+
 @media(max-width:340px){
   .title{
     font-size: 42px;
@@ -909,17 +896,3 @@ menu-link{
     text-shadow: 0 0 5px #000;
   }
   }
-
-
-
-
-
-
-  
-
-
-  
-
-
-
-

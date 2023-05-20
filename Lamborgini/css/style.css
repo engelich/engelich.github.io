@@ -76,21 +76,49 @@ li{
 .menu-right {
   padding-left: 80px;
 }
+.menu-list{
+  padding: 0;
+}
 
 .menu-link{
   color: #363636;
   font-size: 16px;
   font-weight: 400;
   font-family: 'Roboto Condensed';
-  transition: all 0.1s linear;
-  
+  transition: all 0.1s ease-in-out;
+  display: block;
+  padding: 0;
+  position: relative;
 }
+.menu-item{
+  padding: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+.menu-item:hover{
+  transform: scale(1.1);
+  font-weight: 700;
+}
+.menu-link::before{
+ content: '';
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ right: -1vh;
+ left: -1vh;
+ margin: 0 auto;
+ border-bottom: 1px red solid;
+ transform: scaleX(0);
+ transition: all 0.2s ease-in-out;
+}
+.menu-link:hover::before{
+  content: '';
+  position: absolute;
+  transform: scale(1);
+ }
 
-.menu-link:hover{
-  color: #ff0000;
-  text-shadow: 0px 0px 20px #000000;
-  
-}
 
 .promo{
   background-image: url(../img/promo.jpg);
@@ -710,22 +738,57 @@ left: 50%;
   }
 }
 @media(max-width:825px){
+  .menu-item{
+    margin: 0 auto;
+  }
+    
   .menu-btn{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-end;
     width: 45px;
     height: 30px;
     background-color: transparent;
     border: none;
     cursor: pointer;
     z-index: 10;
+    position: relative;
+    
   }
   .menu-btn span{
     height: 3px;
-    width: 100%;
+    width: 90%;
+    transform: scale(1);
     background-color: white;
   }
+  .menu-btn::before, .menu-btn::after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  .menu-btn::before{
+    top: 0;
+  }
+  .menu-btn::after{
+    bottom: 0;
+  }
+  .menu-btn.active span{
+    transform: scale(0);
+  }
+
+  .menu-btn.active::before{
+    top: 50%;
+    transform: rotate(-45deg);
+    
+  }
+  .menu-btn.active::after{
+    top: 50%;
+    transform: rotate(45deg);
+  }
+
   .menu-mobile{
    display: none;
   }

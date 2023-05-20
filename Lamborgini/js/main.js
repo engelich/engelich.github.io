@@ -1,9 +1,8 @@
 
-const menuBtn = document.querySelector('.menu-btn');
-const menuMobile = document.querySelector('.menu-mobile');
 
-menuBtn.addEventListener('click',()=>{
-  menuMobile.classList.toggle('hyi_open');
+document.querySelector('.menu-btn').addEventListener('click', function() {
+  this.classList.toggle('active');
+  document.querySelector('.menu-mobile').classList.toggle('hyi_open')
 });
 
 const swiper = new Swiper('.swiper', {

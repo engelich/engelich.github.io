@@ -1,5 +1,4 @@
 
-
 document.querySelector('.menu-btn').addEventListener('click', function() {
   this.classList.toggle('active');
   document.querySelector('.menu-mobile').classList.toggle('hyi_open')
@@ -7,8 +6,7 @@ document.querySelector('.menu-btn').addEventListener('click', function() {
 
 const swiper = new Swiper('.swiper', {
   loop: true,
-  navigation: {
-    nextEl: '.swiper-button-right',
+  navigation: { 
     prevEl: '.swiper-button-left',
   },
   breakpoints: {

@@ -7,7 +7,8 @@ document.querySelector('.menu-btn').addEventListener('click', function() {
 const swiper = new Swiper('.swiper', {
   loop: true,
   navigation: { 
-    prevEl: '.swiper-button-left',
+    nextEl: '.swiper-button-right',
+    prevEl: '.swiper-button-left'
   },
   breakpoints: {
     0: {

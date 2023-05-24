@@ -471,7 +471,8 @@ max-width: 590px;
   margin-right: 0;
 }
 .blog__item-text{
-  
+  overflow-y: auto;
+  height: 10vh;
   margin-right: 0;
 }
 .blog__item-title{

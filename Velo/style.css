@@ -94,6 +94,9 @@ body {
   margin-left: 30px;
   max-width: 630px;
 }
+.bike-slider__item{
+ max-width: 100%;
+}
 .bike__title {
   font-weight: 700;
   font-size: 64px;
@@ -267,8 +270,6 @@ body {
  }
  .veli-slider__images{
   max-width: 1150px;
- 
-  
  }
  .velo-slider__header{
   margin-top: 150px;
@@ -307,7 +308,7 @@ body {
   outline: none;
 }
 .form__input-name::placeholder,
-.form__input-phone::placeholder.
+.form__input-phone::placeholder,
 .form__input-text {
   color: #6f6f6f;
   opacity: 0.5;
@@ -434,7 +435,7 @@ background: #ff4040;
   flex-direction: column;
   gap: 10px;
 }
-footer__phon-img{
+.footer__phon-img{
   margin-right: 10px;
 }
 .footer__musage-image{
@@ -456,4 +457,60 @@ footer__phon-img{
   text-shadow: 0 0 5px #ffffff;
 }
  
-  
+@media(max-width:1150px){
+  .header__inner{
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .logo{
+    background-color: #131313;
+    max-width: 100%;
+    right: 0;
+    left: 0;
+    padding:0 100%;
+  }
+  .menu{
+    margin-top: 40px;
+    margin-right: 0;
+  }
+  .bike{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+  }
+  .bike__inner{
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0 auto;
+  }
+  .bice__column{
+    margin: 0 auto;
+  }
+  .bice__column p{
+    margin: 0 auto;
+  }
+  .bike__link{
+   display: flex;
+   justify-content: center;
+  }
+  .info__inner{
+    flex-direction: column;
+  }
+  .info__img{
+    margin: 0 auto 20px ;
+  }
+  .info__list{
+   margin: 0 auto;
+   text-align: center;
+  }
+  .characteristics__title{
+    text-align: center;
+  }
+  .characteristics__inner{
+    flex-direction: column;
+  }
+  .veli-slider__images{
+    max-width: 100%;
+   }
+
+}

@@ -1,5 +1,5 @@
 
-let zSpacing = -1100,
+let zSpacing = -1040,
     lastPos = zSpacing / 5,
     $frames = document.getElementsByClassName('frame'),
     frames = Array.from($frames),

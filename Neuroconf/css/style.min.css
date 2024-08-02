@@ -322,7 +322,7 @@ body,html{width:100%;height:100%;background-color:var(--dark);color:#fff;font-fa
 .mussage__title-content-svg-left{position:absolute;left:-250px;top:-150px}
 .mussage__title-content-svg-right{position:absolute;right:-250px;bottom:-200px}
 .mussage__info{max-width:1220px;width:100%;margin:0 auto;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;gap:16px;padding:20px}
-.mussage__info-item{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;gap:20px}
+.mussage__info-item{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;gap:20px;position:relative}
 .mussage__info-item-content{background-color:#fff;border-radius:20px;color:#000;position:relative;padding:20px;max-width:890px;width:100%}
 .mussage__info-item-name{margin-bottom:20px;background:linear-gradient(145.1deg,#fe9a50,#fe6a36);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-fill-color:transparent;font-size:24px;font-weight:700;line-height:32px}
 .mussage__info-item-text{font-size:24px;font-weight:300;line-height:34px}
@@ -377,13 +377,11 @@ body,html{width:100%;height:100%;background-color:var(--dark);color:#fff;font-fa
 .mussage__title-content-svg-right{right:-25%}
 }
 @media (max-width:500px){
-.video__intro{opacity:1}
 .video__intro-link{border-radius:10px}
 .video__content-subtitle{position:static;margin-top:5px;margin-bottom:20px}
 .video__content-subtitle p{font-size:calc(var(--sizeindex) * 1.5);letter-spacing:calc(var(--sizeindex) * .8)}
 .video__content-data-title p{font-size:calc(var(--sizeindex) * 3)}
 .video__content-data-text h4{font-size:calc(var(--sizeindex) * 1.9)}
-.video__media{opacity:1;-webkit-filter:none;filter:none}
 .header{position:absolute;z-index:4;width:100%}
 .header__wrapper{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-top:20px;padding:0 20px;cursor:pointer}
 .header__text p{font-size:calc(var(--sizeindex) * 1.8);font-weight:600;line-height:calc(var(--sizeindex) * 3);letter-spacing:calc(var(--sizeindex) * .5);text-transform:uppercase}

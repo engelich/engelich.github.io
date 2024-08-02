@@ -1,6 +1,6 @@
-:root{--dark:#ffffff;--sizeindex:calc(1vw + 1vh);--transition:.4s cubic-bezier(.3, .2, 0, 1)}
+:root{--dark:linear-gradient(138.30deg, rgb(25, 28, 35) 9.786%,rgb(16, 18, 22) 48.748%);--sizeindex:calc(1vw + 1vh);--transition:.4s cubic-bezier(.3, .2, 0, 1)}
 @media (max-width:900px){
-:root{--dark:#ffffff;--sizeindex:calc(1vw * 1.5);--transition:.4s cubic-bezier(.3, .2, 0, 1)}
+:root{--dark:linear-gradient(138.30deg, rgb(25, 28, 35) 9.786%,rgb(16, 18, 22) 48.748%);--sizeindex:calc(1vw * 1.5);--transition:.4s cubic-bezier(.3, .2, 0, 1)}
 }
 @font-face{font-family:Unbounded;src:url(../fonts/Unbounded/static/Unbounded-Regular.ttf);font-weight:400}
 @font-face{font-family:Unbounded;src:url(../fonts/Unbounded/static/Unbounded-Medium.ttf);font-weight:500}

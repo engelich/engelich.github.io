@@ -1,0 +1,336 @@
+@import "reset";
+@import "global";
+@import "vars";
+@import "fonts";
+
+.contacts {
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  &__title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__title h2 {
+    font-size: calc(var(--sizeindex) * 6.2);
+    font-weight: 900;
+    line-height: calc(var(--sizeindex) * 9);
+    color: #404040;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &__title p {
+    font-size: calc(var(--sizeindex) * 3);
+    font-weight: 900;
+
+    color: #ffb703;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  &__content {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+
+    &-text-title {
+      font-size: calc(var(--sizeindex) * 1.1);
+      font-weight: 900;
+      font-family: "Raleway";
+
+      color: white;
+      width: max-content;
+      text-transform: uppercase;
+    }
+    &-text-subtitle {
+      margin-bottom: calc(var(--sizeindex) * 1);
+    }
+
+    &-text {
+      max-width: 320px;
+      flex-shrink: 2;
+    }
+    &-form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: calc(var(--sizeindex) * 0.5);
+      margin-top: calc(var(--sizeindex) * 0.6);
+      & input {
+        padding: calc(var(--sizeindex) * 0.5);
+        width: 100%;
+        font-size: calc(var(--sizeindex) * 0.55);
+        letter-spacing: 2px;
+        color: white;
+        background: black;
+        border: 1px solid white;
+        font-family: Roboto;
+        font-weight: 300;
+      }
+      & input:focus {
+        outline: none;
+      }
+      & textarea {
+        padding: calc(var(--sizeindex) * 0.5);
+        font-size: calc(var(--sizeindex) * 0.55);
+        letter-spacing: 2px;
+        color: white;
+        background: black;
+        border: 1px solid white;
+        resize: vertical;
+        max-height: 400px;
+        min-height: 100px;
+        font-family: Roboto;
+        font-weight: 300;
+        width: 100%;
+
+        &::-webkit-scrollbar {
+          width: 8px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: rgba(255, 255, 255, 0.5);
+          border-radius: 4px;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+          background: rgba(255, 255, 255, 0.8);
+        }
+
+        & {
+          scrollbar-width: thin;
+          scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
+        }
+
+        &:hover {
+          scrollbar-color: rgba(255, 255, 255, 0.8) transparent;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+
+      & &-btn {
+        font-size: calc(var(--sizeindex) * 0.65);
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: calc(var(--sizeindex) * 0.5) calc(var(--sizeindex) * 0.85);
+        background: #ffb703;
+        letter-spacing: 2px;
+        color: black;
+        width: max-content;
+        font-family: "OpenSans";
+        border-radius: calc(var(--sizeindex) * 0.2);
+        cursor: no-drop;
+        transition: all 0.2s ease-in-out;
+        border: none;
+
+        &:hover {
+          background: #ff4643;
+        }
+        &.active {
+          cursor: pointer;
+          &:hover {
+            background: #fb8500;
+          }
+        }
+      }
+      &-checkbox {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin: 10px 0 10px;
+        & input {
+          display: none;
+        }
+        &-checkmark {
+          width: 20px;
+          height: 20px;
+          border: 2px solid #ccc;
+          border-radius: 4px;
+          margin-right: 10px;
+          position: relative;
+        }
+        &-checkmark span {
+          transition: all 0.2s ease-in-out;
+        }
+
+        &-checkmark:hover span {
+          color: rgb(80, 80, 255);
+        }
+        & input:checked + &-checkmark {
+          background-color: #4caf50;
+          border-color: #4caf50;
+        }
+
+        & input:checked + &-checkmark::after {
+          content: "";
+          position: absolute;
+          left: 6px;
+          top: 2px;
+          width: 5px;
+          height: 10px;
+          border: solid white;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+        }
+        & a {
+          transition: all 0.2s ease-in-out;
+        }
+        & a:hover {
+          color: #ffb703;
+        }
+      }
+      &-error {
+        will-change: transform;
+        &.err input {
+          border: 1px solid red;
+        }
+        &.err textarea {
+          border: 1px solid red;
+        }
+        & .label-error {
+          text-align: center;
+          color: red;
+        }
+      }
+    }
+  
+  }
+  &__popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: #000000b5;
+    color: rgb(0, 255, 0);
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+    & p {
+      font-size: 30px;
+    }
+    &.show {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+@media (min-width: 1500px) {
+  .contacts__content {
+    gap: 50px;
+    &-form textarea {
+      min-height: 200px;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .contacts__content {
+    flex-direction: column;
+    gap: 0;
+    &-contacts {
+      max-width: 100%;
+    }
+    &-text p {
+      font-size: calc(var(--sizeindex) * 1);
+    }
+    &-text-title {
+      font-size: calc(var(--sizeindex) * 2);
+    }
+    &-form input {
+      padding: calc(var(--sizeindex) * 0.5);
+      font-size: calc(var(--sizeindex) * 1);
+    }
+    &-form-input {
+      display: flex;
+      flex-direction: column;
+      gap: calc(var(--sizeindex) * 1);
+    }
+    &-form textarea {
+      padding: calc(var(--sizeindex) * 0.5);
+      font-size: calc(var(--sizeindex) * 1);
+    }
+    &-form &-form-btn {
+      width: 100%;
+      margin: 0 auto;
+      justify-content: center;
+      display: flex;
+      font-size: calc(var(--sizeindex) * 1.3);
+    }
+  }
+}
+@media (max-width: 600px) {
+  .contacts {
+    &__title h2 {
+      font-size: calc(var(--sizeindex) * 5.5);
+      line-height: calc(var(--sizeindex) * 8);
+    }
+    &__title p {
+      font-size: calc(var(--sizeindex) * 2.5);
+    }
+    &__content {
+      flex-direction: column;
+      gap: 0;
+      &-contacts {
+        max-width: 100%;
+      }
+      &-text p {
+        font-size: calc(var(--sizeindex) * 1.2);
+      }
+      &-text-title {
+        font-size: calc(var(--sizeindex) * 2);
+      }
+      &-form input {
+        padding: calc(var(--sizeindex) * 0.6) calc(var(--sizeindex) * 1);
+        font-size: calc(var(--sizeindex) * 1.3);
+        font-weight: 400;
+      }
+      &-form-input {
+        display: flex;
+        flex-direction: column;
+        gap: calc(var(--sizeindex) * 1);
+      }
+      &-form textarea {
+        padding: calc(var(--sizeindex) * 0.6) calc(var(--sizeindex) * 1);
+        font-size: calc(var(--sizeindex) * 1.3);
+        font-weight: 400;
+        min-height: 100px;
+      }
+      &-form-checkbox {
+        & p {
+          font-size: 13px;
+        }
+      }
+    }
+    &__popup {
+      & p {
+        font-size: 16px;
+      }
+      &.show {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}

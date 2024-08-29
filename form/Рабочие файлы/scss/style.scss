@@ -235,7 +235,7 @@
   }
 }
 
-@media (min-width: 1500px) {
+@container (min-width: 1500px) {
   .contacts__content {
     gap: 50px;
     &-form textarea {
@@ -244,7 +244,7 @@
   }
 }
 
-@media (max-width: 1100px) {
+@container (max-width: 1100px) {
   .contacts__content {
     flex-direction: column;
     gap: 0;
@@ -279,7 +279,7 @@
     }
   }
 }
-@media (max-width: 600px) {
+@container (max-width: 600px) {
   .contacts {
     &__title h2 {
       font-size: calc(var(--sizeindex) * 5.5);

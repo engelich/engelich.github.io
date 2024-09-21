@@ -1,0 +1,84 @@
+html{
+  box-sizing: border-box;
+  scrollbar-gutter: stable;
+}
+
+*,
+*::after,
+*::before{
+  box-sizing: inherit;
+}
+
+ul[class],
+ol[class]{
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+nav,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0;
+}
+p{
+  pointer-events: none;
+}
+
+ul[class],li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  vertical-align: middle; 
+}
+
+input,
+button,
+textarea,
+select{
+  font: inherit;
+}
+input,
+button,
+textarea,
+select:focus{
+  outline: none;
+}
+button{
+	padding: 0;
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+textarea {
+  resize: none; 
+}
+

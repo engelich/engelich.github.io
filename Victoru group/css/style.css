@@ -41,6 +41,10 @@ dd {
   padding: 0;
 }
 
+p {
+  pointer-events: none;
+}
+
 ul[class],
 li {
   list-style: none;
@@ -222,6 +226,15 @@ h2 {
   margin: 20px;
   top: 0;
   right: 0;
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.popup__item-close:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .popup.active {
@@ -993,6 +1006,12 @@ h2 {
   border: none;
 }
 
+.calculator__credit-filter-range-sum-num-age {
+  font-weight: 700;
+  line-height: 24px;
+  border: none;
+}
+
 .calculator__credit-filter-range-input {
   position: relative;
   padding: 0;
@@ -1228,6 +1247,8 @@ border: none; /* Убираем границы */
   font-weight: 700;
   line-height: 32px;
   color: var(--colorSecondary);
+  min-width: 110px;
+  text-align: center;
 }
 
 .calculator__result-counter-inner-button {
@@ -1245,6 +1266,14 @@ border: none; /* Убираем границы */
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.calculator__result-counter-inner-button:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .calculator__result-info {

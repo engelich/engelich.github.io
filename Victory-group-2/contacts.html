@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VictoryGroup</title>
+
+  <meta name="description" content="Разаработака Web-интерфейсов">
+  <!-- <meta property="og:type" content="website">
+  <meta property="og:url" content="Ахметов Энгель">
+  <meta property="og:title" content="Frontend-Разработчик">
+  <meta property="og:description" content="Создания привлекательных и удобных пользовательских интерфейсов.">
+  <meta property="og:image:type" content="images/photo.jpg"> 
+  <meta property="og:image:width" content="245">
+  <meta property="og:image:height" content="245">
+  <meta property="og:image:type" content="images/photo.webp">
+  <meta property="og:image:width" content="245">
+  <meta property="og:image:height" content="245"> -->
+  <link rel="icon" href="images/favicon.png">
+  <link rel="icon" href="images/favicon.ico"> 
+  <link rel="icon" type="image/x-icon" href="images/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+
+
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap&_v=20241008151121" rel="stylesheet"> -->
+
+
+  <link rel="stylesheet" href="css/style.min.css?_v=20241008151121">
+  <link rel="stylesheet" href="css/libs.min.css?_v=20241008151121">
+</head>
+  <body>
+
+    <div class="wrapper">
+      <header class="header">
+
+  <div class="container">
+    <div class="header__main">
+      <div class="header__main-top">
+
+        <a class="header__main-logo" href="index.html">
+          <img src="images/logo.svg" alt="logo">
+        </a>
+
+        <nav class="header__main-nav">
+          <ul class="header__main-nav-wrap">
+            <li class="header__main-nav-item"><a href="/" class="header__main-nav-link">Главная</a></li>
+            <li class="header__main-nav-item"><a href="/new-cars.html" class="header__main-nav-link">Новые авто</a></li>
+            <li class="header__main-nav-item"><a href="/used-cars.html" class="header__main-nav-link">Авто с
+                пробегом</a></li>
+            <li class="header__main-nav-item">
+              <a href="#" class="header__main-nav-link">Услуги</a>
+              <ul class="header__main-nav-link-submenu">
+                <li><a href="/auto-credit.html" class="header__main-nav-link-submenu-link">Автокредит</a></li>
+                <li><a href="/trade-in.html" class="header__main-nav-link-submenu-link">Trade-in</a></li>
+                <li><a href="/ransom.html" class="header__main-nav-link-submenu-link">Выкуп</a></li>
+              </ul>
+            </li>
+            <li class="header__main-nav-item"><a href="/stock.html" class="header__main-nav-link">Акции</a></li>
+            <li class="header__main-nav-item"><a href="/contacts.html" class="header__main-nav-link">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="header__main-right">
+          <div class="header__main-right-geo">
+            <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g clip-path="url(#clip6_12292)">
+                <path id="Icon"
+                  d="M12 13C10.34 13 9 11.65 9 10C9 8.34 10.34 7 12 7C13.65 7 15 8.34 15 10C15 11.65 13.65 13 12 13ZM12 22C8 18 4 14.41 4 10C4 5.58 7.58 2 12 2C16.41 2 20 5.58 20 10C20 14.41 16 18 12 22Z"
+                  stroke="#DC4729" stroke-opacity="1.000000" stroke-width="1.000000" stroke-linejoin="round" />
+              </g>
+            </svg>
+            <a href="#">г. Санкт-Петербург</a>
+
+          </div>
+          <button data-popup="popup-open"  class="header__main-right-button">
+            Связаться
+          </button>
+          <div class="header__main-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+      </div>
+      <div class="header__main-mobil">
+        <a href="#" class="header__main-mobil-item">
+          <picture><source srcset="images/header/header-mobil-card-1-3x.webp" type="image/webp"><img src="images/header/header-mobil-card-1-3x.jpg" alt="images"></picture>
+        </a>
+        <a href="#" class="header__main-mobil-item">
+          <picture><source srcset="images/header/header-mobil-card-2-3x.webp" type="image/webp"><img src="images/header/header-mobil-card-2-3x.jpg" alt="images"></picture>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+
+
+</header>
+      
+<section class="new-cars">
+ 
+</section>
+      <footer class="footer">
+  <div class="container">
+
+    <div class="footer__inner">
+      <div class="footer__logo footer__inner-item">
+        <div class="footer__logo-wrap">
+          <a href="/">
+            <img src="images/logo.svg" alt="logo">
+          </a>
+
+          <p class="footer__logo-text">
+            Автосалон новых и б/у автомобилей из Китая
+          </p>
+        </div>
+
+
+      </div>
+      <div class="footer__navigation footer__inner-item">
+        <nav class="footer__navigation-nav">
+          <ul class="footer__navigation-nav-wrap">
+
+            <li class="footer__navigation-nav-item">
+              <a href="/new-cars.html" class="footer__navigation-nav-link">Новые авто</a>
+            </li>
+            <li class="footer__navigation-nav-item">
+              <a href="/used-cars.html" class="footer__navigation-nav-link">Авто с пробегом</a>
+            </li>
+            <li class="footer__navigation-nav-item">
+              <a href="/auto-credit.html" class="footer__navigation-nav-link">Автокредит</a>
+            </li>
+            <li class="footer__navigation-nav-item">
+              <a href="/tradi-in.html" class="footer__navigation-nav-link">Trade-in</a>
+            </li>
+            <li class="footer__navigation-nav-item">
+              <a href="/ransom.html" class="footer__navigation-nav-link">Выкуп</a>
+            </li>
+            <li class="footer__navigation-nav-item">
+              <a href="/stock.html" class="footer__navigation-nav-link">Акции</a>
+            </li>
+            <li class="footer__navigation-nav-item">
+              <a href="#" class="footer__navigation-nav-link">Отзывы</a>
+            </li>
+            <li class="footer__navigation-nav-item">
+              <a href="/cotacts.html" class="footer__navigation-nav-link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="footer__brands">
+          <h4 class="footer__brands-title">
+            Бренды
+          </h4>
+          <nav class="footer__brands-nav">
+            <ul class="footer__brands-nav-wrap">
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">BAIC</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Chery</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Exeed</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">GAC</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Great Wall</a>
+              </li>
+            </ul>
+            <ul class="footer__brands-nav-wrap">
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Hongqi</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Jaecoo</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Jetta</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">LiXiang</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Voyah</a>
+              </li>
+            </ul>
+            <ul class="footer__brands-nav-wrap">
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Changan</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Dongfeng</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">FAW</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Gelly</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Haval</a>
+              </li>
+            </ul>
+            <ul class="footer__brands-nav-wrap">
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">JAC</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Jetour</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Kaiyi</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Skywell</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Zeekr</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="footer__contacts footer__inner-item">
+        <h4 class="footer__contacts-title">
+          Контакты
+        </h4>
+        <div class="footer__contacts-geo">
+          <h5 class="footer__contacts-geo-title">
+            Адрес
+          </h5>
+          <p class="footer__contacts-geo-text">
+            г. Краснодар, Республика Адыгея, поселок Яблоновский, улица Краснодарская, 3
+          </p>
+        </div>
+        <div class="footer__contacts-time">
+          <h5 class="footer__contacts-time-title">
+            График работы
+          </h5>
+          <p class="footer__contacts-time-text">
+            Ежедневно с <span>9:00</span>до <span>20:00</span>
+          </p>
+        </div>
+        <div class="footer__contacts-connection">
+          <a href="tel:80000000000" class="footer__contacts-phone">
+            8 (000) 000-00-00
+          </a>
+          <button data-popup="popup-open" class="footer__contacts-btn">
+            Заказать звонок
+          </button>
+        </div>
+
+      </div>
+
+      <div id="map" class="footer__contacts-map footer__inner-item">
+        <script type="text/javascript" charset="utf-8" async
+          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A32e1f119ea495757f0035ef24391ce13fcd1c7c9dc6400200b6e7979494fcb41&amp;width=100%25&amp;height=330&amp;lang=ru_RU&amp;scroll=true&_v=20241008151121"></script>
+        <div class="footer__contacts-map-config"></div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__bottom-text">
+        Маркетинговая ставка по кредиту - от 18% не является процентной ставкой по кредитному договору, а выражает
+        процентный размер расходов физ. лица на приобретение авто за счет кредита. Разница между маркетинговой ставкой и
+        процентной ставкой компенсируется посредством соразмерного снижения дилером цены на ТС, доп.оборудование на
+        усмотрение дилера. Валюта кредита — рубль РФ. Первоначальный взнос до 90%, сумма кредита от 350 000 р. до 7 000
+        000 р., срок кредита до 84 мес.; процентная ставка от 29,4%. При обязательном условии страхования жизни, КАСКО в
+        страховых компаниях-партнерах на весь срок действия кредитного договора, а также покупки доп.оборудования.
+      </p>
+    </div>
+  </div>
+</footer>
+      <div class="header-popup">
+  <div class="container">
+    <div class="header-popup__links">
+      <nav class="header-popup__nav">
+        <ul>
+          <li class="header-popup__nav-item"><a href="/" class="header-popup__nav-link">Главная</a></li>
+          <li class="header-popup__nav-item"><a href="/new-cars.html" class="header-popup__nav-link">Новые авто</a></li>
+          <li class="header-popup__nav-item"><a href="/used-cars.html" class="header-popup__nav-link">Авто с
+              пробегом</a></li>
+          <li class="header-popup__nav-item header-popup__nav-item--services">
+            <a href="#" class="header-popup__nav-link header-popup__nav-link--services">
+              <p>Услуги</p>
+              <svg width="8" height="4" viewBox="0 0 8 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4L8 4.76837e-07L1.74846e-07 -3.49691e-07L4 4Z" fill="#98A3AE" />
+              </svg>
+            </a>
+            <div class="header-popup__nav-link-submenu-wrap">
+              <ul class="header-popup__nav-link-submenu" id="mobil-submenu" style="min-height:0px">
+                <li><a href="/auto-credit.html" class="header-popup__nav-link-submenu-link">Автокредит</a></li>
+                <li><a href="/trade-in.html" class="header-popup__nav-link-submenu-link">Trade-in</a></li>
+                <li><a href="/ransom.html" class="header-popup__nav-link-submenu-link">Выкуп</a></li>
+              </ul>
+            </div>
+
+          </li>
+          <li class="header-popup__nav-item"><a href="#" class="header-popup__nav-link">Акции</a></li>
+          <li class="header-popup__nav-item"><a href="#" class="header-popup__nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-popup__info">
+      <a class="header-popup__info-phone" href="tel:80000000000">8 (000) 000-00-00</a>
+      <button data-popup="popup-open" class="header-popup__info-btn">
+        Заказать звонок
+      </button>
+      <p class="header-popup__info-geo">
+        г. Краснодар, Республика Адыгея, поселок Яблоновский, улица Краснодарская, 3
+      </p>
+      <p class="header-popup__info-time">
+        Ежедневно с <span>9:00</span> до <span>20:00</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="window-popup">
+
+
+
+  <div class="window-popup-inner">
+    <div class="window-popup-advertising">
+      <picture><source srcset="images/popup/modal-img.webp" type="image/webp"><img src="images/popup/modal-img.png" alt=""></picture>
+
+    </div>
+
+    <div class="window-popup-content">
+      <div class="window-popup-top">
+        <h4 class="window-popup-top-title">
+          Заголовок формы обратной связи в три строки
+        </h4>
+        <div class="window-popup-close">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" fill="white" />
+            <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="#DDE3EE" />
+            <path d="M29 19L19 29M19 19L29 29" stroke="#0E0E0E" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </div>
+      <h5 class="window-popup-subtitle">
+        Подзаголовок
+      </h5>
+          <p class="window-popup-text">
+            Заполните форму и отправьте заявку. Мы свяжемся с вами в ближайшее время для подтверждения брони
+          </p>
+          <div class="window-popup-error" style="color: red; display: none;"></div>
+          <form class="window-popup-form">
+            <input class="window-popup-form-input" type="text" placeholder="Имя">
+            <input class="window-popup-form-input art-stranger" type="tel" placeholder="+7 (000) 000-00-00">
+            <input class="window-popup-form-btn" type="submit" value="Отправить заявку">
+          </form>
+
+          <a href="#" class="window-popup-confidentiality">
+            Отправляя заявку, я соглашаюсь с условиями <span>пользовательского соглашения</span>
+          </a>
+    </div>
+
+
+  </div>
+</div>
+<div class="window-popup-ok">
+  <div class="container">
+    <div class="window-popup-ok-inner">
+      <div class="window-popup-ok-top">
+        <img src="images/popup/modal-ok.svg" alt="image">
+        <h3 class="window-popup-ok-top-title">
+          Ваша заявка успешно отправлена!
+        </h3>
+      </div>
+      <p class="window-popup-ok-text">
+        Мы свяжемся с вами в ближайшее время
+      </p>
+      <div class="window-popup-ok-close-btn">
+        Хорошо
+      </div>
+    </div>
+  </div>
+</div>
+    </div>  
+ 
+    <script src="js/libs.min.js?_v=20241008151121"></script>
+    <script src="js/app.min.js?_v=20241008151121"></script>
+  </body>
+</html>

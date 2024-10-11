@@ -25,11 +25,11 @@
 
   <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap&_v=20241008181028" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap&_v=20241011160835" rel="stylesheet"> -->
 
 
-  <link rel="stylesheet" href="css/style.min.css?_v=20241008181028">
-  <link rel="stylesheet" href="css/libs.min.css?_v=20241008181028">
+  <link rel="stylesheet" href="css/style.min.css?_v=20241011160835">
+  <link rel="stylesheet" href="css/libs.min.css?_v=20241011160835">
 </head>
   <body>
 
@@ -107,9 +107,714 @@
 
 
 </header>
-      
-<section class="new-cars">
- 
+      <section class="new-cars">
+  <div class="new-cars__inner">
+
+    <div class="new-cars__baner" data-desktop="images/new-cars/new-cars-baner.jpg"
+      data-mobile="images/new-cars/new-cars-baner-mobil.jpg">
+      <div class="container">
+        <div class="new-cars__baner-title">
+          <h1>
+            Новые автомобили из Китая <span> в наличии в Санкт-Петербурге</span>
+          </h1>
+        </div>
+      </div>
+
+    </div>
+    <div class="new-cars__wrap">
+      <div class="new-cars__filter">
+        <div class="new-cars__filter-left">
+
+          <div class="new-cars__filter-left-buttons">
+            <button data-tab="#filter-tab_1" class="new-cars__filter-left-buttons-btn">
+              Новые
+            </button>
+            <button data-tab="#filter-tab_2" class="new-cars__filter-left-buttons-btn">
+              С пробегом
+            </button>
+          </div>
+
+          <div data-select="select" class="new-cars__filter-left-brands">
+            <div class="new-cars__filter-left-brands-selected">
+              <p class="new-cars__filter-left-brands-selected-text">
+                Марка
+              </p>
+              <svg data-select="select-detal" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 14L16 10L8 10L12 14Z" fill="#98A3AE" />
+              </svg>
+            </div>
+            <div class="new-cars__filter-left-select-wrap">
+              <div data-select="select-open" class="new-cars__filter-select" style="min-height:0">
+                <div class="new-cars__filter-left-select-item">Марка</div>
+                <div class="new-cars__filter-left-select-item">Chery</div>
+                <div class="new-cars__filter-left-select-item">Haval</div>
+                <div class="new-cars__filter-left-select-item">Exeed</div>
+              </div>
+            </div>
+
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 14L16 10L8 10L12 14Z" fill="#98A3AE" />
+            </svg>
+
+          </div>
+
+
+        </div>
+
+
+        <div class="new-cars__filter-inputs">
+          <div class="new-cars__filter-inputs-prices">
+            <input class="new-cars__filter-inputs-prices-input" type="text" placeholder="Цена от">
+            <input class="new-cars__filter-inputs-prices-input" type="text" placeholder="Цена до">
+          </div>
+        </div>
+
+        <div class="new-cars__filter-right">
+          <div class="new-cars__filter-right-reset">
+            <p class="new-cars__filter-right-reset-text">
+              Сбросить фильтр
+            </p>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 4L4 12M4 4L12 12" stroke-width="0.666667" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+          </div>
+          <button class="new-cars__filter-right-btn">
+            Найти авто
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+</section>
+
+
+<section class="all-auto">
+  <div class="container">
+    <div class="all-auto__top">
+
+      <h2 class="all-auto__top-title">
+        Авто в наличии
+      </h2>
+
+      <div data-select="select" class="all-auto__top-filter">
+        <div class="all-auto__top-filter-selected">
+          <p class="all-auto__top-filter-selected-text">
+            Рекомендуемое
+          </p>
+          <svg data-select="select-detal" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 14L16 10L8 10L12 14Z" fill="#98A3AE" />
+          </svg>
+        </div>
+        <div class="all-auto__top-filter-select-wrap">
+          <div class="all-auto__top-filter-select" data-select="select-open" style="min-height:0">
+            <div class="all-auto__top-filter-select-item">Рекомендуемое</div>
+            <div class="all-auto__top-filter-select-item">Цена по возрастанию</div>
+            <div class="all-auto__top-filter-select-item">Цена по убыванию</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="all-auto__tabs">
+      <div id="filter-tab_1" class="all-auto__tabs-inner">
+
+        <div class="all-auto__item">
+          <div class="all-auto__item-wrap">
+            <a href="#" class="all-auto__item-product">
+
+              <div class="all-auto__item-photo">
+                <picture><source srcset="images/all-auto/all-auto-1.webp" type="image/webp"><img class="all-auto__item-photo-img" src="images/all-auto/all-auto-1.jpg" alt="img"></picture>
+                <span class="all-auto__item-photo-new">NEW</span>
+                <span class="all-auto__item-photo-save"></span>
+              </div>
+
+              <div class="all-auto__item-title">
+                Chery Tiggo 4 Pro 18 YEARS EDITION
+              </div>
+            </a>
+
+            <div class="all-auto__item-price">
+              <p class="all-auto__item-price-relevant">
+                <span>17 800 000</span> ₽
+              </p>
+              <p class="all-auto__item-price-old">
+                <span>17 800 000</span> ₽
+              </p>
+            </div>
+            <div class="all-auto__item-buttons">
+              <button class="all-auto__item-buttons-reservation">
+                Забронировать
+              </button>
+              <div class="all-auto__item-buttons-compare">
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.83333 8.66667V11.3333M11.1667 7.33333V11.3333M8.5 4.66667V11.3333M5.7 14H11.3C12.4201 14 12.9802 14 13.408 13.782C13.7843 13.5903 14.0903 13.2843 14.282 12.908C14.5 12.4802 14.5 11.9201 14.5 10.8V5.2C14.5 4.0799 14.5 3.51984 14.282 3.09202C14.0903 2.71569 13.7843 2.40973 13.408 2.21799C12.9802 2 12.4201 2 11.3 2H5.7C4.5799 2 4.01984 2 3.59202 2.21799C3.21569 2.40973 2.90973 2.71569 2.71799 3.09202C2.5 3.51984 2.5 4.0799 2.5 5.2V10.8C2.5 11.9201 2.5 12.4802 2.71799 12.908C2.90973 13.2843 3.21569 13.5903 3.59202 13.782C4.01984 14 4.5799 14 5.7 14Z"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p class="all-auto__item-buttons-compare-text">
+                  К сравнению
+                </p>
+
+              </div>
+              <button class="all-auto__item-buttons-credit">
+                В кредит от <span>236 094</span> ₽/мес
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="all-auto__item">
+          <div class="all-auto__item-wrap">
+            <a href="#" class="all-auto__item-product">
+
+              <div class="all-auto__item-photo">
+                <picture><source srcset="images/all-auto/all-auto-1.webp" type="image/webp"><img class="all-auto__item-photo-img" src="images/all-auto/all-auto-1.jpg" alt="img"></picture>
+                <span class="all-auto__item-photo-new">NEW</span>
+                <span class="all-auto__item-photo-save"></span>
+              </div>
+
+              <div class="all-auto__item-title">
+                Chery Tiggo 4 Pro 18 YEARS EDITION
+              </div>
+            </a>
+
+            <div class="all-auto__item-price">
+              <p class="all-auto__item-price-relevant">
+                <span>17 800 000</span> ₽
+              </p>
+              <p class="all-auto__item-price-old">
+                <span>17 800 000</span> ₽
+              </p>
+            </div>
+            <div class="all-auto__item-buttons">
+              <button class="all-auto__item-buttons-reservation">
+                Забронировать
+              </button>
+              <div class="all-auto__item-buttons-compare">
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.83333 8.66667V11.3333M11.1667 7.33333V11.3333M8.5 4.66667V11.3333M5.7 14H11.3C12.4201 14 12.9802 14 13.408 13.782C13.7843 13.5903 14.0903 13.2843 14.282 12.908C14.5 12.4802 14.5 11.9201 14.5 10.8V5.2C14.5 4.0799 14.5 3.51984 14.282 3.09202C14.0903 2.71569 13.7843 2.40973 13.408 2.21799C12.9802 2 12.4201 2 11.3 2H5.7C4.5799 2 4.01984 2 3.59202 2.21799C3.21569 2.40973 2.90973 2.71569 2.71799 3.09202C2.5 3.51984 2.5 4.0799 2.5 5.2V10.8C2.5 11.9201 2.5 12.4802 2.71799 12.908C2.90973 13.2843 3.21569 13.5903 3.59202 13.782C4.01984 14 4.5799 14 5.7 14Z"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p class="all-auto__item-buttons-compare-text">
+                  К сравнению
+                </p>
+
+              </div>
+              <button class="all-auto__item-buttons-credit">
+                В кредит от <span>236 094</span> ₽/мес
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="all-auto__item">
+          <div class="all-auto__item-wrap">
+            <a href="#" class="all-auto__item-product">
+
+              <div class="all-auto__item-photo">
+                <picture><source srcset="images/all-auto/all-auto-1.webp" type="image/webp"><img class="all-auto__item-photo-img" src="images/all-auto/all-auto-1.jpg" alt="img"></picture>
+                <span class="all-auto__item-photo-new">NEW</span>
+                <span class="all-auto__item-photo-save"></span>
+              </div>
+
+              <div class="all-auto__item-title">
+                Chery Tiggo 4 Pro 18 YEARS EDITION
+              </div>
+            </a>
+
+            <div class="all-auto__item-price">
+              <p class="all-auto__item-price-relevant">
+                <span>17 800 000</span> ₽
+              </p>
+              <p class="all-auto__item-price-old">
+                <span>17 800 000</span> ₽
+              </p>
+            </div>
+            <div class="all-auto__item-buttons">
+              <button class="all-auto__item-buttons-reservation">
+                Забронировать
+              </button>
+              <div class="all-auto__item-buttons-compare">
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.83333 8.66667V11.3333M11.1667 7.33333V11.3333M8.5 4.66667V11.3333M5.7 14H11.3C12.4201 14 12.9802 14 13.408 13.782C13.7843 13.5903 14.0903 13.2843 14.282 12.908C14.5 12.4802 14.5 11.9201 14.5 10.8V5.2C14.5 4.0799 14.5 3.51984 14.282 3.09202C14.0903 2.71569 13.7843 2.40973 13.408 2.21799C12.9802 2 12.4201 2 11.3 2H5.7C4.5799 2 4.01984 2 3.59202 2.21799C3.21569 2.40973 2.90973 2.71569 2.71799 3.09202C2.5 3.51984 2.5 4.0799 2.5 5.2V10.8C2.5 11.9201 2.5 12.4802 2.71799 12.908C2.90973 13.2843 3.21569 13.5903 3.59202 13.782C4.01984 14 4.5799 14 5.7 14Z"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p class="all-auto__item-buttons-compare-text">
+                  К сравнению
+                </p>
+
+              </div>
+              <button class="all-auto__item-buttons-credit">
+                В кредит от <span>236 094</span> ₽/мес
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="all-auto__item">
+          <div class="all-auto__item-wrap">
+            <a href="#" class="all-auto__item-product">
+
+              <div class="all-auto__item-photo">
+                <picture><source srcset="images/all-auto/all-auto-1.webp" type="image/webp"><img class="all-auto__item-photo-img" src="images/all-auto/all-auto-1.jpg" alt="img"></picture>
+                <span class="all-auto__item-photo-new">NEW</span>
+                <span class="all-auto__item-photo-save"></span>
+              </div>
+
+              <div class="all-auto__item-title">
+                Chery Tiggo 4 Pro 18 YEARS EDITION
+              </div>
+            </a>
+
+            <div class="all-auto__item-price">
+              <p class="all-auto__item-price-relevant">
+                <span>17 800 000</span> ₽
+              </p>
+              <p class="all-auto__item-price-old">
+                <span>17 800 000</span> ₽
+              </p>
+            </div>
+            <div class="all-auto__item-buttons">
+              <button class="all-auto__item-buttons-reservation">
+                Забронировать
+              </button>
+              <div class="all-auto__item-buttons-compare">
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.83333 8.66667V11.3333M11.1667 7.33333V11.3333M8.5 4.66667V11.3333M5.7 14H11.3C12.4201 14 12.9802 14 13.408 13.782C13.7843 13.5903 14.0903 13.2843 14.282 12.908C14.5 12.4802 14.5 11.9201 14.5 10.8V5.2C14.5 4.0799 14.5 3.51984 14.282 3.09202C14.0903 2.71569 13.7843 2.40973 13.408 2.21799C12.9802 2 12.4201 2 11.3 2H5.7C4.5799 2 4.01984 2 3.59202 2.21799C3.21569 2.40973 2.90973 2.71569 2.71799 3.09202C2.5 3.51984 2.5 4.0799 2.5 5.2V10.8C2.5 11.9201 2.5 12.4802 2.71799 12.908C2.90973 13.2843 3.21569 13.5903 3.59202 13.782C4.01984 14 4.5799 14 5.7 14Z"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p class="all-auto__item-buttons-compare-text">
+                  К сравнению
+                </p>
+
+              </div>
+              <button class="all-auto__item-buttons-credit">
+                В кредит от <span>236 094</span> ₽/мес
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="all-auto__item">
+          <div class="all-auto__item-wrap">
+            <a href="#" class="all-auto__item-product">
+
+              <div class="all-auto__item-photo">
+                <picture><source srcset="images/all-auto/all-auto-1.webp" type="image/webp"><img class="all-auto__item-photo-img" src="images/all-auto/all-auto-1.jpg" alt="img"></picture>
+                <span class="all-auto__item-photo-new">NEW</span>
+                <span class="all-auto__item-photo-save"></span>
+              </div>
+
+              <div class="all-auto__item-title">
+                Chery Tiggo 4 Pro 18 YEARS EDITION
+              </div>
+            </a>
+
+            <div class="all-auto__item-price">
+              <p class="all-auto__item-price-relevant">
+                <span>17 800 000</span> ₽
+              </p>
+              <p class="all-auto__item-price-old">
+                <span>17 800 000</span> ₽
+              </p>
+            </div>
+            <div class="all-auto__item-buttons">
+              <button class="all-auto__item-buttons-reservation">
+                Забронировать
+              </button>
+              <div class="all-auto__item-buttons-compare">
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.83333 8.66667V11.3333M11.1667 7.33333V11.3333M8.5 4.66667V11.3333M5.7 14H11.3C12.4201 14 12.9802 14 13.408 13.782C13.7843 13.5903 14.0903 13.2843 14.282 12.908C14.5 12.4802 14.5 11.9201 14.5 10.8V5.2C14.5 4.0799 14.5 3.51984 14.282 3.09202C14.0903 2.71569 13.7843 2.40973 13.408 2.21799C12.9802 2 12.4201 2 11.3 2H5.7C4.5799 2 4.01984 2 3.59202 2.21799C3.21569 2.40973 2.90973 2.71569 2.71799 3.09202C2.5 3.51984 2.5 4.0799 2.5 5.2V10.8C2.5 11.9201 2.5 12.4802 2.71799 12.908C2.90973 13.2843 3.21569 13.5903 3.59202 13.782C4.01984 14 4.5799 14 5.7 14Z"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p class="all-auto__item-buttons-compare-text">
+                  К сравнению
+                </p>
+
+              </div>
+              <button class="all-auto__item-buttons-credit">
+                В кредит от <span>236 094</span> ₽/мес
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="all-auto__item">
+          <div class="all-auto__item-wrap">
+            <a href="#" class="all-auto__item-product">
+
+              <div class="all-auto__item-photo">
+                <picture><source srcset="images/all-auto/all-auto-1.webp" type="image/webp"><img class="all-auto__item-photo-img" src="images/all-auto/all-auto-1.jpg" alt="img"></picture>
+                <span class="all-auto__item-photo-new">NEW</span>
+                <span class="all-auto__item-photo-save"></span>
+              </div>
+
+              <div class="all-auto__item-title">
+                Chery Tiggo 4 Pro 18 YEARS EDITION
+              </div>
+            </a>
+
+            <div class="all-auto__item-price">
+              <p class="all-auto__item-price-relevant">
+                <span>17 800 000</span> ₽
+              </p>
+              <p class="all-auto__item-price-old">
+                <span>17 800 000</span> ₽
+              </p>
+            </div>
+            <div class="all-auto__item-buttons">
+              <button class="all-auto__item-buttons-reservation">
+                Забронировать
+              </button>
+              <div class="all-auto__item-buttons-compare">
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.83333 8.66667V11.3333M11.1667 7.33333V11.3333M8.5 4.66667V11.3333M5.7 14H11.3C12.4201 14 12.9802 14 13.408 13.782C13.7843 13.5903 14.0903 13.2843 14.282 12.908C14.5 12.4802 14.5 11.9201 14.5 10.8V5.2C14.5 4.0799 14.5 3.51984 14.282 3.09202C14.0903 2.71569 13.7843 2.40973 13.408 2.21799C12.9802 2 12.4201 2 11.3 2H5.7C4.5799 2 4.01984 2 3.59202 2.21799C3.21569 2.40973 2.90973 2.71569 2.71799 3.09202C2.5 3.51984 2.5 4.0799 2.5 5.2V10.8C2.5 11.9201 2.5 12.4802 2.71799 12.908C2.90973 13.2843 3.21569 13.5903 3.59202 13.782C4.01984 14 4.5799 14 5.7 14Z"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p class="all-auto__item-buttons-compare-text">
+                  К сравнению
+                </p>
+
+              </div>
+              <button class="all-auto__item-buttons-credit">
+                В кредит от <span>236 094</span> ₽/мес
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="all-auto__item">
+          <div class="all-auto__item-wrap">
+            <a href="#" class="all-auto__item-product">
+
+              <div class="all-auto__item-photo">
+                <picture><source srcset="images/all-auto/all-auto-1.webp" type="image/webp"><img class="all-auto__item-photo-img" src="images/all-auto/all-auto-1.jpg" alt="img"></picture>
+                <span class="all-auto__item-photo-new">NEW</span>
+                <span class="all-auto__item-photo-save"></span>
+              </div>
+
+              <div class="all-auto__item-title">
+                Chery Tiggo 4 Pro 18 YEARS EDITION
+              </div>
+            </a>
+
+            <div class="all-auto__item-price">
+              <p class="all-auto__item-price-relevant">
+                <span>17 800 000</span> ₽
+              </p>
+              <p class="all-auto__item-price-old">
+                <span>17 800 000</span> ₽
+              </p>
+            </div>
+            <div class="all-auto__item-buttons">
+              <button class="all-auto__item-buttons-reservation">
+                Забронировать
+              </button>
+              <div class="all-auto__item-buttons-compare">
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.83333 8.66667V11.3333M11.1667 7.33333V11.3333M8.5 4.66667V11.3333M5.7 14H11.3C12.4201 14 12.9802 14 13.408 13.782C13.7843 13.5903 14.0903 13.2843 14.282 12.908C14.5 12.4802 14.5 11.9201 14.5 10.8V5.2C14.5 4.0799 14.5 3.51984 14.282 3.09202C14.0903 2.71569 13.7843 2.40973 13.408 2.21799C12.9802 2 12.4201 2 11.3 2H5.7C4.5799 2 4.01984 2 3.59202 2.21799C3.21569 2.40973 2.90973 2.71569 2.71799 3.09202C2.5 3.51984 2.5 4.0799 2.5 5.2V10.8C2.5 11.9201 2.5 12.4802 2.71799 12.908C2.90973 13.2843 3.21569 13.5903 3.59202 13.782C4.01984 14 4.5799 14 5.7 14Z"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p class="all-auto__item-buttons-compare-text">
+                  К сравнению
+                </p>
+
+              </div>
+              <button class="all-auto__item-buttons-credit">
+                В кредит от <span>236 094</span> ₽/мес
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="all-auto__item">
+          <div class="all-auto__item-wrap">
+            <a href="#" class="all-auto__item-product">
+
+              <div class="all-auto__item-photo">
+                <picture><source srcset="images/all-auto/all-auto-1.webp" type="image/webp"><img class="all-auto__item-photo-img" src="images/all-auto/all-auto-1.jpg" alt="img"></picture>
+                <span class="all-auto__item-photo-new">NEW</span>
+                <span class="all-auto__item-photo-save"></span>
+              </div>
+
+              <div class="all-auto__item-title">
+                Chery Tiggo 4 Pro 18 YEARS EDITION
+              </div>
+            </a>
+
+            <div class="all-auto__item-price">
+              <p class="all-auto__item-price-relevant">
+                <span>17 800 000</span> ₽
+              </p>
+              <p class="all-auto__item-price-old">
+                <span>17 800 000</span> ₽
+              </p>
+            </div>
+            <div class="all-auto__item-buttons">
+              <button class="all-auto__item-buttons-reservation">
+                Забронировать
+              </button>
+              <div class="all-auto__item-buttons-compare">
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.83333 8.66667V11.3333M11.1667 7.33333V11.3333M8.5 4.66667V11.3333M5.7 14H11.3C12.4201 14 12.9802 14 13.408 13.782C13.7843 13.5903 14.0903 13.2843 14.282 12.908C14.5 12.4802 14.5 11.9201 14.5 10.8V5.2C14.5 4.0799 14.5 3.51984 14.282 3.09202C14.0903 2.71569 13.7843 2.40973 13.408 2.21799C12.9802 2 12.4201 2 11.3 2H5.7C4.5799 2 4.01984 2 3.59202 2.21799C3.21569 2.40973 2.90973 2.71569 2.71799 3.09202C2.5 3.51984 2.5 4.0799 2.5 5.2V10.8C2.5 11.9201 2.5 12.4802 2.71799 12.908C2.90973 13.2843 3.21569 13.5903 3.59202 13.782C4.01984 14 4.5799 14 5.7 14Z"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p class="all-auto__item-buttons-compare-text">
+                  К сравнению
+                </p>
+
+              </div>
+              <button class="all-auto__item-buttons-credit">
+                В кредит от <span>236 094</span> ₽/мес
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div id="filter-tab_2" class="all-auto__tabs-inner">
+        <div class="all-auto__item">
+          <div class="all-auto__item-wrap">
+            <a href="#" class="all-auto__item-product">
+
+              <div class="all-auto__item-photo">
+                <picture><source srcset="images/all-auto/all-auto-1.webp" type="image/webp"><img class="all-auto__item-photo-img" src="images/all-auto/all-auto-1.jpg" alt="img"></picture>
+                <span class="all-auto__item-photo-new">NEW</span>
+                <span class="all-auto__item-photo-save"></span>
+              </div>
+
+              <div class="all-auto__item-title">
+                Chery Tiggo 4 Pro 18 YEARS EDITION
+              </div>
+            </a>
+
+            <div class="all-auto__item-price">
+              <p class="all-auto__item-price-relevant">
+                <span>17 800 000</span> ₽
+              </p>
+              <p class="all-auto__item-price-old">
+                <span>17 800 000</span> ₽
+              </p>
+            </div>
+            <div class="all-auto__item-buttons">
+              <button class="all-auto__item-buttons-reservation">
+                Забронировать
+              </button>
+              <div class="all-auto__item-buttons-compare">
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.83333 8.66667V11.3333M11.1667 7.33333V11.3333M8.5 4.66667V11.3333M5.7 14H11.3C12.4201 14 12.9802 14 13.408 13.782C13.7843 13.5903 14.0903 13.2843 14.282 12.908C14.5 12.4802 14.5 11.9201 14.5 10.8V5.2C14.5 4.0799 14.5 3.51984 14.282 3.09202C14.0903 2.71569 13.7843 2.40973 13.408 2.21799C12.9802 2 12.4201 2 11.3 2H5.7C4.5799 2 4.01984 2 3.59202 2.21799C3.21569 2.40973 2.90973 2.71569 2.71799 3.09202C2.5 3.51984 2.5 4.0799 2.5 5.2V10.8C2.5 11.9201 2.5 12.4802 2.71799 12.908C2.90973 13.2843 3.21569 13.5903 3.59202 13.782C4.01984 14 4.5799 14 5.7 14Z"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p class="all-auto__item-buttons-compare-text">
+                  К сравнению
+                </p>
+
+              </div>
+              <button class="all-auto__item-buttons-credit">
+                В кредит от <span>236 094</span> ₽/мес
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="popular">
+
+  <div class="container">
+
+
+    <div class="popular__top">
+      <h2 class="popular__top-title">
+        Популярное сегодня
+      </h2>
+    </div>
+  </div>
+  <div class="popular__swiper">
+
+
+    <div class="swiper popular__container">
+
+      <div class="swiper-wrapper popular__wrapper">
+
+        <div class="swiper-slide popular__item">
+          <a href="#" class="popular__item-link">
+            <picture><source srcset="images/popular/popular-1.webp" type="image/webp"><img class="popular__item-img" src="images/popular/popular-1.jpg" alt="img"></picture>
+            <h3 class="popular__item-title">
+              CHERY Tiggo 7 Pro Max 7 Pro Max
+            </h3>
+            <p class="popular__item-text">
+              <span>4,7</span> млн - <span>11,2</span> млн
+            </p>
+          </a>
+
+        </div>
+
+        <div class="swiper-slide popular__item">
+          <a href="#" class="popular__item-link">
+            <picture><source srcset="images/popular/popular-2.webp" type="image/webp"><img class="popular__item-img" src="images/popular/popular-2.jpg" alt="img"></picture>
+            <h3 class="popular__item-title">
+              Changan CS55PLUS
+            </h3>
+            <p class="popular__item-text">
+              <span>4,7</span> млн - <span>11,2</span> млн
+            </p>
+          </a>
+
+        </div>
+
+        <div class="swiper-slide popular__item">
+          <a href="#" class="popular__item-link">
+            <picture><source srcset="images/popular/popular-1.webp" type="image/webp"><img class="popular__item-img" src="images/popular/popular-1.jpg" alt="img"></picture>
+            <h3 class="popular__item-title">
+              Changan CS35PLUS
+            </h3>
+            <p class="popular__item-text">
+              <span>4,7</span> млн - <span>11,2</span> млн
+            </p>
+          </a>
+
+        </div>
+
+        <div class="swiper-slide popular__item">
+          <a href="#" class="popular__item-link">
+            <picture><source srcset="images/popular/popular-1.webp" type="image/webp"><img class="popular__item-img" src="images/popular/popular-1.jpg" alt="img"></picture>
+            <h3 class="popular__item-title">
+              EXEED RX
+            </h3>
+            <p class="popular__item-text">
+              <span>4,7</span> млн - <span>11,2</span> млн
+            </p>
+          </a>
+
+        </div>
+
+        <div class="swiper-slide popular__item">
+          <a href="#" class="popular__item-link">
+            <picture><source srcset="images/popular/popular-1.webp" type="image/webp"><img class="popular__item-img" src="images/popular/popular-1.jpg" alt="img"></picture>
+            <h3 class="popular__item-title">
+              Geely Monjaro
+            </h3>
+            <p class="popular__item-text">
+              <span>4,7</span> млн - <span>11,2</span> млн
+            </p>
+          </a>
+
+        </div>
+
+        <div class="swiper-slide popular__item">
+          <a href="#" class="popular__item-link">
+            <picture><source srcset="images/popular/popular-1.webp" type="image/webp"><img class="popular__item-img" src="images/popular/popular-1.jpg" alt="img"></picture>
+            <h3 class="popular__item-title">
+              CHERY Tiggo 7 Pro Max
+            </h3>
+            <p class="popular__item-text">
+              <span>4,7</span> млн - <span>11,2</span> млн
+            </p>
+          </a>
+
+        </div>
+
+        <div class="swiper-slide popular__item">
+          <a href="#" class="popular__item-link">
+            <picture><source srcset="images/popular/popular-1.webp" type="image/webp"><img class="popular__item-img" src="images/popular/popular-1.jpg" alt="img"></picture>
+            <h3 class="popular__item-title">
+              CHERY Tiggo 7 Pro Max
+            </h3>
+            <p class="popular__item-text">
+              <span>4,7</span> млн - <span>11,2</span> млн
+            </p>
+          </a>
+
+        </div>
+
+        <div class="swiper-slide popular__item">
+          <a href="#" class="popular__item-link">
+            <picture><source srcset="images/popular/popular-1.webp" type="image/webp"><img class="popular__item-img" src="images/popular/popular-1.jpg" alt="img"></picture>
+            <h3 class="popular__item-title">
+              CHERY Tiggo 7 Pro Max
+            </h3>
+            <p class="popular__item-text">
+              <span>4,7</span> млн - <span>11,2</span> млн
+            </p>
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+<section class="form" id="form" data-desktop="images/form/form-desctop.jpg" data-mobile="images/form/form-mobil.jpg">
+  <div class="container">
+
+
+    <div class="form__inner">
+      <div class="form__content">
+        <h2 class="form__content-title">
+          Ответим на все
+          ваши вопросы
+        </h2>
+        <p class="form__content-text">
+          Заполните и отправьте заявку.<br>Мы свяжемся в ближайшее время
+        </p>
+        <div class="form__content-error" style="color: red; display: none;"></div>
+        <form class="form__content-form">
+          <input class="form__content-form-input" type="text" placeholder="Имя">
+          <input class="form__content-form-input art-stranger" type="tel" placeholder="+7 (000) 000-00-00">
+          <input class="form__content-form-btn" type="submit" value="Отправить заявку">
+        </form>
+        <a href="#" class="form__content-confidentiality">
+          Отправляя заявку, я соглашаюсь с условиями <span>пользовательского соглашения</span>
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
       <footer class="footer">
   <div class="container">
@@ -268,7 +973,7 @@
 
       <div id="map" class="footer__contacts-map footer__inner-item">
         <script type="text/javascript" charset="utf-8" async
-          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A32e1f119ea495757f0035ef24391ce13fcd1c7c9dc6400200b6e7979494fcb41&amp;width=100%25&amp;height=330&amp;lang=ru_RU&amp;scroll=true&_v=20241008181028"></script>
+          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A32e1f119ea495757f0035ef24391ce13fcd1c7c9dc6400200b6e7979494fcb41&amp;width=100%25&amp;height=330&amp;lang=ru_RU&amp;scroll=true&_v=20241011160835"></script>
         <div class="footer__contacts-map-config"></div>
       </div>
     </div>
@@ -284,6 +989,7 @@
     </div>
   </div>
 </footer>
+
       <div class="header-popup">
   <div class="container">
     <div class="header-popup__links">
@@ -393,7 +1099,7 @@
 </div>
     </div>  
  
-    <script src="js/libs.min.js?_v=20241008181028"></script>
-    <script src="js/app.min.js?_v=20241008181028"></script>
+    <script src="js/libs.min.js?_v=20241011160835"></script>
+    <script src="js/app.min.js?_v=20241011160835"></script>
   </body>
 </html>

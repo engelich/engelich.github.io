@@ -1565,6 +1565,13 @@ h2 {
   font-style: normal;
   line-height: 28px;
   padding: 0px 6px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.mileage__item-title:hover {
+  color: black;
+  text-shadow: 0 0 1px var(--colorGreyGap);
 }
 
 .mileage__item-characteristics {
@@ -2187,29 +2194,77 @@ h2 {
   width: 100%;
   left: 0;
   top: -112px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 20px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-shadow: 0px 20px 30px 0px rgba(181, 191, 204, 0.2);
+          box-shadow: 0px 20px 30px 0px rgba(181, 191, 204, 0.2);
+  z-index: 3;
 }
 
-.new-cars__filter-left {
+.new-cars__filter-wrapper {
+  position: relative;
+}
+
+.new-cars__filter-tabs {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.new-cars__filter-tabs.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 20px;
+}
+
+.new-cars__filter-tabs--new-cars {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.new-cars__filter-tabs--new-cars .new-cars__filter-tabs--item:first-child {
   max-width: 298px;
   width: 100%;
 }
 
-.new-cars__filter-left-buttons {
+.new-cars__filter-tabs--new-cars .new-cars__filter-tabs--item:nth-child(2) {
+  max-width: 600px;
+  width: 100%;
+}
+
+.new-cars__filter-tabs--new-cars .new-cars__filter-tabs--item:last-child {
+  max-width: 298px;
+  width: 100%;
+}
+
+.new-cars__filter-tabs--old-cars .new-cars__filter-bottom-select--brand .new-cars__filter-bottom-select-selected {
+  border-radius: 8px 0px 0px 8px;
+}
+
+.new-cars__filter-tabs--old-cars .new-cars__filter-bottom-select--model .new-cars__filter-bottom-select-selected {
+  border-radius: 0px 8px 8px 0;
+}
+
+.new-cars__filter-tabs--old-cars .new-cars__filter-bottom-select--model .new-cars__filter-bottom-select-selected-text {
+  color: var(--colorGreyGap);
+}
+
+.new-cars__filter-tabs--old-cars .new-cars__filter-inputs {
+  max-width: calc(25% - 20px);
+}
+
+.new-cars__filter-tabs--old-cars .new-cars__filter-tabs--item {
+  max-width: calc(25% - 20px);
+  width: 100%;
+}
+
+.new-cars__filter-top {
+  margin-bottom: 20px;
+}
+
+.new-cars__filter-top-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2225,7 +2280,7 @@ h2 {
   width: max-content;
 }
 
-.new-cars__filter-left-buttons-btn {
+.new-cars__filter-top-buttons-btn {
   padding: 9px 20px;
   color: var(--colorBlack);
   border-radius: 12px;
@@ -2237,40 +2292,50 @@ h2 {
   line-height: 20px;
 }
 
-.new-cars__filter-left-buttons-btn:hover {
+.new-cars__filter-top-buttons-btn:hover {
   border: 1px solid var(--colorBlack);
 }
 
-.new-cars__filter-left-buttons-btn.active {
+.new-cars__filter-top-buttons-btn.active {
   background-color: var(--colorBlack);
   color: var(--colorWhite);
 }
 
-.new-cars__filter-left-brands {
+.new-cars__filter-bottom-select {
   cursor: pointer;
   width: 100%;
   cursor: pointer;
   position: relative;
 }
 
-.new-cars__filter-left-brands.active .new-cars__filter-left-select-wrap {
+.new-cars__filter-bottom-select-model {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.new-cars__filter-bottom-select.active .new-cars__filter-bottom-select-wrap {
   -ms-grid-rows: 1fr;
   grid-template-rows: 1fr;
   border: 1px solid var(--colorGreyWhite);
   border-top: none;
 }
 
-.new-cars__filter-left-brands.active .new-cars__filter-left-brands-selected {
+.new-cars__filter-bottom-select.active .new-cars__filter-bottom-brands-selected {
   border-radius: 8px 8px 0 0;
 }
 
-.new-cars__filter-left-brands.active svg {
+.new-cars__filter-bottom-select.active svg {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.new-cars__filter-left-brands svg {
+.new-cars__filter-bottom-select svg {
   position: absolute;
   top: 25%;
   right: 16px;
@@ -2278,7 +2343,7 @@ h2 {
   cursor: pointer;
 }
 
-.new-cars__filter-left-brands-selected {
+.new-cars__filter-bottom-select-selected {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2295,11 +2360,11 @@ h2 {
   color: var(--colorGreyBlack);
 }
 
-.new-cars__filter-left-brands-selected:hover {
+.new-cars__filter-bottom-select-selected:hover {
   border: 1px solid var(--colorGreyGap);
 }
 
-.new-cars__filter-left-select-wrap {
+.new-cars__filter-bottom-select-wrap {
   position: absolute;
   top: 100%;
   left: 0;
@@ -2314,16 +2379,17 @@ h2 {
   background-color: white;
   border-radius: 0 0 8px 8px;
   border: 0px solid var(--colorGreyWhite);
+  z-index: 4;
 }
 
-.new-cars__filter-left-select-item {
+.new-cars__filter-bottom-select-item {
   padding: 6px 16px;
   color: var(--colorGreyBlack);
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
-.new-cars__filter-left-select-item:hover {
+.new-cars__filter-bottom-select-item:hover {
   color: var(--colorBlack);
   background-color: var(--colorGreyWhite);
 }
@@ -2335,7 +2401,6 @@ h2 {
 }
 
 .new-cars__filter-inputs-prices {
-  max-width: 616px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2365,26 +2430,10 @@ h2 {
   border-radius: 0 8px 8px 0;
 }
 
-.new-cars__filter-right {
-  max-width: 298px;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 20px;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.new-cars__filter-right-reset {
+.new-cars__filter-reset {
+  position: absolute;
+  top: 10px;
+  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2401,45 +2450,55 @@ h2 {
   max-width: 298px;
 }
 
-.new-cars__filter-right-reset-text {
+.new-cars__filter-reset-text {
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
 }
 
-.new-cars__filter-right-reset svg {
+.new-cars__filter-reset svg {
   -webkit-transition: var(--transition);
   transition: var(--transition);
   stroke: var(--colorGreyBlack);
 }
 
-.new-cars__filter-right-reset:hover {
+.new-cars__filter-reset:hover {
   color: black;
   border: 1px solid var(--colorGreyBlack);
 }
 
-.new-cars__filter-right-reset:hover svg {
+.new-cars__filter-reset:hover svg {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
   stroke: var(--colorBlack);
 }
 
-.new-cars__filter-right-btn {
+.new-cars__filter-btn-mobile-open-wrap {
+  font-weight: 600;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 12px 0;
+  display: none;
+  cursor: pointer;
+}
+
+.new-cars__filter-btn {
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
   padding: 14px 20px;
   width: 100%;
-  max-width: 298px;
   background-color: var(--colorElem);
   -webkit-transition: var(--transition);
   transition: var(--transition);
   color: var(--colorWhite);
   border-radius: 8px;
+  max-width: calc(25% - 20px);
 }
 
-.new-cars__filter-right-btn:hover {
+.new-cars__filter-btn:hover {
   background-color: var(--colorElemActive);
 }
 
@@ -2557,22 +2616,10 @@ h2 {
   background-color: var(--colorWhite);
 }
 
-.all-auto__tabs-inner {
-  display: none;
-}
-
-.all-auto__tabs-inner.active {
-  display: block;
-}
-
-.all-auto__tabs-inner.active .all-auto__tabs-wrapper {
+.all-auto__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.all-auto__tabs-wrapper {
-  display: none;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 12px;
@@ -3246,6 +3293,60 @@ h2 {
     line-height: 28px;
   }
 
+  .new-cars {
+    position: relative;
+    margin-bottom: 215px;
+  }
+
+  .new-cars__baner {
+    background-size: cover;
+    background-position: center;
+    padding: 16px 0px 168px 0px;
+  }
+
+  .new-cars__baner-title {
+    max-width: 700px;
+    text-wrap: balance;
+    color: var(--colorWhite);
+    text-transform: uppercase;
+  }
+
+  .new-cars__baner-title span {
+    color: var(--colorGreyGap);
+  }
+
+  .new-cars__filter-tabs--new-cars {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+
+  .new-cars__filter-tabs--new-cars .new-cars__filter-tabs--item:first-child {
+    max-width: calc(50% - 20px);
+    width: 100%;
+  }
+
+  .new-cars__filter-tabs--new-cars .new-cars__filter-tabs--item:nth-child(2) {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .new-cars__filter-tabs--new-cars .new-cars__filter-tabs--item:last-child {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .new-cars__filter-tabs--old-cars .new-cars__filter-inputs {
+    max-width: calc(50% - 20px);
+  }
+
+  .new-cars__filter-tabs--old-cars .new-cars__filter-tabs--item {
+    max-width: calc(50% - 20px);
+  }
+
+  .new-cars__filter-btn {
+    max-width: calc(50% - 20px);
+  }
+
   .all-auto__item {
     -ms-flex-preferred-size: calc(50% - 12px);
         flex-basis: calc(50% - 12px);
@@ -3575,7 +3676,7 @@ h2 {
     height: auto !important;
     -webkit-transition: var(--transition);
     transition: var(--transition);
-    z-index: 4;
+    z-index: 1;
   }
 
   .mileage__item-photo {
@@ -3802,64 +3903,104 @@ h2 {
   }
 
   .new-cars__filter {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    top: -150px;
     padding: 16px;
-    top: -147px;
-    z-index: 3;
-    gap: 5px;
-    left: auto;
-    right: auto;
   }
 
-  .new-cars__filter-left {
-    max-width: 100%;
-  }
-
-  .new-cars__filter-left-buttons {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+  .new-cars__filter-top-buttons {
     width: 100%;
   }
 
-  .new-cars__filter-left-buttons-btn {
+  .new-cars__filter-top-buttons-btn {
     width: 100%;
   }
 
-  .new-cars__filter-inputs {
-    max-width: 100%;
-    margin-bottom: 15px;
-  }
-
-  .new-cars__filter-inputs-prices {
-    max-width: 100%;
-  }
-
-  .new-cars__filter-right {
-    max-width: 100%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+  .new-cars__filter-tabs {
     gap: 8px;
   }
 
-  .new-cars__filter-right-reset {
+  .new-cars__filter-tabs--new-cars {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .new-cars__filter-tabs--new-cars .new-cars__filter-tabs--item {
+    max-width: 100%;
+  }
+
+  .new-cars__filter-tabs--new-cars .new-cars__filter-tabs--item:first-child {
     max-width: 100%;
     width: 100%;
+  }
+
+  .new-cars__filter-tabs--new-cars .new-cars__filter-tabs--item:nth-child(2) {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .new-cars__filter-tabs--new-cars .new-cars__filter-tabs--item:last-child {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .new-cars__filter-tabs--old-cars .new-cars__filter-inputs {
+    max-width: 100%;
+  }
+
+  .new-cars__filter-tabs--old-cars .new-cars__filter-tabs--item {
+    max-width: 100%;
+    display: none;
+  }
+
+  .new-cars__filter-tabs--old-cars .new-cars__filter-tabs--item:nth-child(-n+3) {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+
+  .new-cars__filter-btn-mobile-open-wrap {
+    display: block;
+  }
+
+  .new-cars__filter-btn {
+    max-width: 100%;
+  }
+
+  .new-cars__filter-reset {
+    position: static;
+    margin-top: 8px;
+    max-width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
 
-  .new-cars__filter-right-btn {
-    max-width: 100%;
+  .new-cars__filter-reset-text {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+
+  .new-cars__filter-reset svg {
+    -webkit-transition: var(--transition);
+    transition: var(--transition);
+    stroke: var(--colorGreyBlack);
+  }
+
+  .new-cars__filter-reset:hover {
+    color: black;
+    border: 1px solid var(--colorGreyBlack);
+  }
+
+  .new-cars__filter-reset:hover svg {
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+    stroke: var(--colorBlack);
+  }
+
+  .all-auto--used-cars {
+    margin-top: 310px;
   }
 
   .all-auto__top {
@@ -3871,6 +4012,12 @@ h2 {
         -ms-flex-align: start;
             align-items: start;
     margin-bottom: 20px;
+  }
+
+  .all-auto__top-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
   }
 
   .all-auto__top-filter {

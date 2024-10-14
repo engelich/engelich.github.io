@@ -1505,6 +1505,7 @@ h2 {
           flex-direction: column;
   -ms-flex-preferred-size: calc(25% - 12px);
       flex-basis: calc(25% - 12px);
+  width: calc(25% - 12px);
   background-color: var(--colorWhite);
   padding: 10px 10px 16px 10px;
   border-radius: 20px;
@@ -1556,7 +1557,6 @@ h2 {
       -ms-flex-positive: 1;
           flex-grow: 1;
   width: auto;
-  max-width: 250px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1677,13 +1677,13 @@ h2 {
   background-color: black;
 }
 
-.mileage__item:last-child {
+.mileage__item--last {
   padding: 16px;
   background-position: center;
   background-size: cover;
 }
 
-.mileage__item:last-child .mileage__item-last {
+.mileage__item--last .mileage__item-last {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1695,7 +1695,7 @@ h2 {
   height: 100%;
 }
 
-.mileage__item:last-child .mileage__item-last-title {
+.mileage__item--last .mileage__item-last-title {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -1707,7 +1707,7 @@ h2 {
   text-wrap: balance;
 }
 
-.mileage__item:last-child .mileage__item-last-link {
+.mileage__item--last .mileage__item-last-link {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1726,7 +1726,7 @@ h2 {
   transition: var(--transition);
 }
 
-.mileage__item:last-child .mileage__item-last-link:hover {
+.mileage__item--last .mileage__item-last-link:hover {
   color: var(--colorGreyGap);
   background-color: black;
 }
@@ -2559,15 +2559,63 @@ h2 {
 
 .all-auto__tabs-inner {
   display: none;
+}
+
+.all-auto__tabs-inner.active {
+  display: block;
+}
+
+.all-auto__tabs-inner.active .all-auto__tabs-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.all-auto__tabs-wrapper {
+  display: none;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 12px;
 }
 
-.all-auto__tabs-inner.active {
+.all-auto__prices {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px;
+  background-color: var(--colorWhite);
+  border-radius: 8px;
+  margin-bottom: 40px;
+  overflow-y: auto;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  position: relative;
+}
+
+.all-auto__prices-btn {
+  border-radius: 8px;
+  border: 1px solid var(--colorGreyGap);
+  padding: 10px 20px;
+  font-weight: 600;
+  line-height: 20px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.all-auto__prices-btn:hover {
+  border: 1px solid var(--colorBlack);
+}
+
+.all-auto__prices-btn.active {
+  background-color: var(--colorBlack);
+  color: white;
 }
 
 .all-auto__item {
@@ -3171,7 +3219,6 @@ h2 {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    max-width: 200px;
   }
 
   .mileage__item-characteristics {
@@ -3520,8 +3567,8 @@ h2 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-flex-preferred-size: calc(50% - 5px);
-        flex-basis: calc(50% - 5px);
+    -ms-flex-preferred-size: calc(50% - 8px);
+        flex-basis: calc(50% - 8px);
     background-color: transparent;
     padding: 0;
     border-radius: 20px;
@@ -3550,7 +3597,6 @@ h2 {
 
   .mileage__item-title {
     padding: 0;
-    white-space: normal;
     font-size: 14px;
     font-weight: 600;
     line-height: 20px;
@@ -3833,8 +3879,14 @@ h2 {
   }
 
   .all-auto__item {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    -ms-flex-preferred-size: calc(50% - 6px);
+        flex-basis: calc(50% - 6px);
+  }
+
+  .all-auto__item-price {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 0px 10px;
   }
 
   .all-auto__item-buttons {
@@ -3850,13 +3902,13 @@ h2 {
 
   .all-auto__item-buttons-reservation {
     width: inherit;
-    -ms-flex-preferred-size: calc(50% - 4px);
-        flex-basis: calc(50% - 4px);
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 
   .all-auto__item-buttons-compare {
-    -ms-flex-preferred-size: calc(50% - 4px);
-        flex-basis: calc(50% - 4px);
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
     width: inherit;
   }
 
@@ -3920,6 +3972,43 @@ h2 {
 
   .header__main-right {
     gap: 10px;
+  }
+
+  .mileage__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+
+  .all-auto__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+
+  .all-auto__item-buttons {
+    position: relative;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .all-auto__item-buttons-reservation {
+    width: inherit;
+    -ms-flex-preferred-size: calc(50% - 4px);
+        flex-basis: calc(50% - 4px);
+  }
+
+  .all-auto__item-buttons-compare {
+    -ms-flex-preferred-size: calc(50% - 4px);
+        flex-basis: calc(50% - 4px);
+    width: inherit;
+  }
+
+  .all-auto__item-buttons-credit {
+    width: 100%;
   }
 
   .footer {

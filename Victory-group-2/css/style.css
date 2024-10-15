@@ -2906,6 +2906,64 @@ h2 {
   background-color: black;
 }
 
+.all-auto__pagination {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 16px;
+}
+
+.all-auto__pagination-nums {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 4px;
+}
+
+.all-auto__pagination-item {
+  padding: 6px 12px;
+  border-radius: 50%;
+  border: 1px solid #DDE3EE;
+  color: var(--colorGreyGap);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.all-auto__pagination-item.active {
+  padding: 10px 16px;
+  border: 1px solid var(--colorGreyBlack);
+}
+
+.all-auto__pagination-item:hover {
+  border: 1px solid var(--colorGreyBlack);
+}
+
+.all-auto__pagination svg {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.all-auto__pagination svg:hover {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 .footer {
   padding: 80px 0 20px 0;
   background-color: var(--colorBlack);
@@ -4156,6 +4214,10 @@ h2 {
 
   .all-auto__item-buttons-credit {
     width: 100%;
+  }
+
+  .all-auto__pagination {
+    display: none;
   }
 
   .footer {

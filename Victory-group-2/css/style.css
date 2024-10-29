@@ -7112,6 +7112,17 @@ h2 {
   color: var(--colorGreyWhite);
 }
 
+.contacts__info-item svg {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.contacts__info-item:hover svg {
+  -webkit-transform: translate(10%, -10%);
+      -ms-transform: translate(10%, -10%);
+          transform: translate(10%, -10%);
+}
+
 .contacts__photo {
   -ms-flex-preferred-size: calc(50% - 6px);
       flex-basis: calc(50% - 6px);

@@ -4095,8 +4095,20 @@ h2 {
 
 .baner--services .baner__background {
   position: relative;
-  padding: 40px 0px 320px 0px;
+  padding: 10px 0px 320px 0px;
   margin-bottom: 120px;
+}
+
+.baner--services .detal-breadcrumbs {
+  margin: 0 0 16px 0;
+}
+
+.baner--services .detal-breadcrumbs li {
+  color: var(--colorGreyGap);
+}
+
+.baner--services .detal-breadcrumbs a {
+  color: var(--colorWhite);
 }
 
 .baner__services {
@@ -9211,9 +9223,19 @@ h2 {
 
   .baner--services .baner__background {
     position: relative;
-    padding: 80px 0px 0px 0px;
+    padding: 10px 0px 30px 0px;
     margin-bottom: 120px;
     border-radius: 0;
+  }
+
+  .baner--services .baner__services {
+    -webkit-transform: translateY(110px);
+        -ms-transform: translateY(110px);
+            transform: translateY(110px);
+  }
+
+  .baner--services .baner__services-buttons-btn {
+    max-width: 100%;
   }
 
   .baner__services {

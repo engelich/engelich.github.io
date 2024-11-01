@@ -25,11 +25,11 @@
 
   <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap&_v=20241101135331" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap&_v=20241101171456" rel="stylesheet"> -->
 
 
-  <link rel="stylesheet" href="css/style.min.css?_v=20241101135331">
-  <link rel="stylesheet" href="css/libs.min.css?_v=20241101135331">
+  <link rel="stylesheet" href="css/style.min.css?_v=20241101171456">
+  <link rel="stylesheet" href="css/libs.min.css?_v=20241101171456">
 </head>
   <body>
 
@@ -109,7 +109,7 @@
 </header>
       <main class="main">
         <section class="baner baner--services">
-  <div class="baner__background lazy-load background-load" style="background-image: url('images/lazy-load.jpg');"
+  <div class="baner__background lazy lazy-load background-load" style="background-image: url('images/lazy-load-mini.jpg');"
    data-bg-desktop="images/j/trade-in.jpg"
    data-bg-mobile="images/j/trade-in-mobil.jpg">
    <div class="detal-breadcrumbs">
@@ -182,12 +182,14 @@
     </p>
   </div>
   <div class="bid__fields">
+    <form class="bid__forms">
     <div class="bid__car-form">
       <h4 class="bid__car-form-title">
         Ваш автомобиль
       </h4>
+      
       <div class="bid__inner">
-        <input class="bid__input" type="text" placeholder="Марка">
+        <input class="bid__input bid__input-validate-marka" type="text" placeholder="Марка">
         <input class="bid__input" type="text" placeholder="Модель">
         <input class="bid__input" type="text" placeholder="Год выпуска" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
         <input class="bid__input" type="text" placeholder="Пробег" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
@@ -196,21 +198,23 @@
   
     </div>
     
-    <form class="bid__form">
+    <div class="bid__form">
       <h4 class="bid__form-title">
         Контактная информация
       </h4>
       <div class="bid-error" style="color: red; display: none;"></div>
       <div class="bid__inner">
-        <input class="bid__input" type="text" placeholder="Имя">
-        <input class="bid__input art-stranger" type="tel" placeholder="+7 (000) 000-00-00">
+        <input class="bid__input bid__input-validate-name" type="text" placeholder="Имя">
+        <input class="bid__input bid__input-validate-phone art-stranger" type="tel" placeholder="+7 (000) 000-00-00">
         <a href="#" class="confidentiality">
           Отправляя заявку, я соглашаюсь с условиями <span>пользовательского соглашения</span>
         </a>
         <button class="bid__input-btn">Отправить заявку</button>
       </div>
       
-    </form>
+    </div>
+
+  </form>
   </div>
 
   
@@ -220,28 +224,28 @@
 <article class="advantages">
   
     <div class="advantages__inner">
-      <div class="advantages__item advantages__item--about lazy-load background-load" style="background-image: url('images/lazy-load.jpg');"  data-bg-desktop="images/services/advantages.jpg" 
+      <div class="advantages__item lazy advantages__item--about lazy-load background-load" style="background-image: url('images/lazy-load-mini.jpg');"  data-bg-desktop="images/services/advantages.jpg" 
                                                                                                                                               data-bg-mobile="images/services/advantages-mobil.jpg">
         <h4 class="advantages__item-title">
           Преимущества Trade-in в CarShopName
         </h4>
       </div>
 
-      <div class="advantages__item lazy-load background-load" style="background-image: url('images/lazy-load.jpg');"  data-bg-desktop="images/services/advantages-1.jpg" 
+      <div class="advantages__item lazy lazy-load background-load" style="background-image: url('images/lazy-load.jpg');"  data-bg-desktop="images/services/advantages-1.jpg" 
                                                                                                                       data-bg-mobile="images/services/advantages-1-mobil.jpg">
         <h4 class="advantages__item-title">
           Оцениваем ваш автомобиль согласно его рыночной стоимости, не занижая цены
         </h4>
       </div>
 
-      <div class="advantages__item lazy-load background-load" style="background-image: url('images/lazy-load.jpg');"  data-bg-desktop="images/services/advantages-2.jpg" 
+      <div class="advantages__item lazy lazy-load background-load" style="background-image: url('images/lazy-load.jpg');"  data-bg-desktop="images/services/advantages-2.jpg" 
                                                                                                                       data-bg-mobile="images/services/advantages-2-mobil.jpg">
         <h4 class="advantages__item-title">
           Предлагаем сумму к доплате в обе стороны, обмен с доплатой в кредит и другие индивидуальные варианты сделки
         </h4>
       </div>
 
-      <div class="advantages__item lazy-load background-load" style="background-image: url('images/lazy-load.jpg');"  data-bg-desktop="images/services/advantages-3.jpg" 
+      <div class="advantages__item lazy lazy-load background-load" style="background-image: url('images/lazy-load.jpg');"  data-bg-desktop="images/services/advantages-3.jpg" 
                                                                                                                       data-bg-mobile="images/services/advantages-3-mobil.jpg">
         <h4 class="advantages__item-title">
           Оперативная сделка по обмену. Проведем оценку и предоставим решение в день обращения
@@ -283,9 +287,9 @@
           
         </div>
         <div class="sleders__item-photo">
-          <picture class="sleders__item-photo-img lazy-load">
-              <source data-srcset="images/services/sliders-1.webp" type="image/webp">
-              <source srcset="images/lazy-load.jpg" data-srcset="images/services/sliders-1.jpg">
+          <picture class="sleders__item-photo-img lazy lazy-load">
+              <!-- <source data-srcset="images/services/sliders-1.webp" type="image/webp"> -->
+              <source srcset="images/lazy-load-mini.jpg" data-srcset="images/services/sliders-1.jpg">
               <img src="images/lazy-load-min.jpg" data-src="images/services/sliders-1.jpg" alt="img" >
           </picture>
          
@@ -308,8 +312,8 @@
 
         </div>
         <div class="sleders__item-photo">
-          <picture class="sleders__item-photo-img lazy-load">
-              <source data-srcset="images/services/sliders-2.webp" type="image/webp">
+          <picture class="sleders__item-photo-img lazy lazy-load">
+              <!-- <source data-srcset="images/services/sliders-2.webp" type="image/webp"> -->
               <source srcset="images/lazy-load-min.jpg" data-srcset="images/services/sliders-2.jpg">
               <img src="images/lazy-load-min.jpg" data-src="images/services/sliders-2.jpg" alt="img" >
           </picture>
@@ -335,8 +339,8 @@
           
         </div>
         <div class="sleders__item-photo">
-          <picture class="sleders__item-photo-img lazy-load">
-              <source data-srcset="images/services/sliders-3.webp" type="image/webp">
+          <picture class="sleders__item-photo-img lazy lazy-load">
+              <!-- <source data-srcset="images/services/sliders-3.webp" type="image/webp"> -->
               <source srcset="images/lazy-load-min.jpg" data-srcset="images/services/sliders-3.jpg">
               <img src="images/lazy-load-min.jpg" data-src="images/services/sliders-3.jpg" alt="img" >
           </picture>
@@ -569,7 +573,7 @@
 
       </div>
 
-      <div id="map" class="footer__contacts-map footer__inner-item lazy-load" data-src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A32e1f119ea495757f0035ef24391ce13fcd1c7c9dc6400200b6e7979494fcb41&amp;width=100%25&amp;height=330&amp;lang=ru_RU&amp;scroll=true">
+      <div id="map" class="footer__contacts-map lazy footer__inner-item lazy-load" data-src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A32e1f119ea495757f0035ef24391ce13fcd1c7c9dc6400200b6e7979494fcb41&amp;width=100%25&amp;height=330&amp;lang=ru_RU&amp;scroll=true">
       
         <div class="footer__contacts-map-config"></div>
       </div>
@@ -1522,7 +1526,7 @@
 </div>
     </div>  
  
-    <script src="js/libs.min.js?_v=20241101135331"></script>
-    <script src="js/app.min.js?_v=20241101135331"></script>
+    <script src="js/libs.min.js?_v=20241101171456"></script>
+    <script src="js/app.min.js?_v=20241101171456"></script>
   </body>
 </html>

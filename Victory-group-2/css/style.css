@@ -7751,12 +7751,83 @@ h2 {
   width: max-content;
 }
 
+.documents__item-title-head {
+  color: var(--colorWhite);
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+
 .documents__item-title {
   font-size: 17px;
   font-weight: 300;
   line-height: 24px;
   color: var(--colorWhite);
   text-wrap: balance;
+}
+
+.credit-cads {
+  margin-bottom: 80px;
+}
+
+.credit-cads__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  max-width: 1364px;
+  padding: 0 16px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.credit-cads__item {
+  background: radial-gradient(187.39% 62.46% at 70.83% 82.41%, #45474C 0%, #191A1C 100%);
+  padding: 24px;
+  border-radius: 20px;
+  max-width: 324px;
+  width: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+}
+
+.credit-cads__item-contects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+
+.credit-cads__item-contects-title {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--colorElem);
+}
+
+.credit-cads__item-contects-text {
+  color: var(--colorWhite);
+}
+
+.calculator--avtocredit .calculator__title {
+  margin-bottom: 40px;
 }
 
 .carousel {
@@ -10426,6 +10497,57 @@ h2 {
     padding: 16px;
   }
 
+  .documents__item-title-head {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: -8px;
+  }
+
+  .credit-cads {
+    margin-bottom: 68px;
+  }
+
+  .credit-cads__item {
+    max-width: 240px;
+    padding: 9px 12px;
+  }
+
+  .credit-cads__item-contects {
+    gap: 0;
+  }
+
+  .credit-cads__item-contects-title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  .credit-cads__item-contects-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  .credit-cads__item-image svg,
+  .credit-cads__item-image img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .baner--avrocredit .baner__background {
+    margin-bottom: 100px;
+  }
+
+  .calculator--avtocredit {
+    margin-bottom: 52px;
+  }
+
+  .calculator--avtocredit .calculator__title {
+    margin-bottom: 20px;
+  }
+
   .sleders {
     margin-bottom: 106px;
   }
@@ -10478,6 +10600,7 @@ h2 {
   }
 
   .carousel {
+    margin: 0 auto 80px auto;
     padding: 0;
   }
 

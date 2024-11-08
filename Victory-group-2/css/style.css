@@ -8333,6 +8333,10 @@ h2 {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  height: auto;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .compare-auto .compare-auto__slide-photo {

@@ -22,14 +22,14 @@
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <link rel="apple-touch-icon" href="images/favicon.png">
 
-
+ 
   <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap&_v=20241105141546" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap&_v=20241108165328" rel="stylesheet"> -->
 
-
-  <link rel="stylesheet" href="css/style.min.css?_v=20241105141546">
-  <link rel="stylesheet" href="css/libs.min.css?_v=20241105141546">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css?_v=20241108165328" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20241108165328">
+  <link rel="stylesheet" href="css/libs.min.css?_v=20241108165328">
 </head>
   <body>
 
@@ -125,23 +125,33 @@
     </div>
     <div class="new-cars__wrap">
       <div class="new-cars__filter">
-        <div class="">
+        <div class="new-cars__filter-wrapper">
 
         
         <div class="new-cars__filter-top">
 
-          <div data-default-index="1" class="new-cars__filter-top-buttons">
-            <button data-tab="#filter-tab_1" class="new-cars__filter-top-buttons-btn">
+          <div class="new-cars__filter-top-buttons">
+            <button data-tab="#filter-tab_1" data-default-tab="true" class="new-cars__filter-top-buttons-btn">
               Новые
             </button>
-            <button data-tab="#filter-tab_2" class="new-cars__filter-top-buttons-btn" data-default-tab="true">
+            <button data-tab="#filter-tab_2"  class="new-cars__filter-top-buttons-btn">
               С пробегом
             </button>
           </div>
         </div>
         <div class="new-cars__filter-bottom ">
           <div id="filter-tab_1" class="new-cars__filter-tabs new-cars__filter-tabs--new-cars">
-            <div data-select="select" class="new-cars__filter-bottom-select new-cars__filter-tabs--item">
+            <div class="new-cars__filter-tabs--item">
+              <select class="select-two">
+                <option value="1">Марка</option>
+                <option value="2">Chery</option>
+                <option value="3">Опция 3</option>
+                <option value="4">Опция 4</option>
+              </select>
+            </div>
+            
+
+            <!-- <div data-select="select" class="new-cars__filter-bottom-select new-cars__filter-tabs--item">
               <div class="new-cars__filter-bottom-select-selected">
                 <p class="new-cars__filter-bottom-select-selected-text">
                   Марка
@@ -164,7 +174,7 @@
                 <path d="M12 14L16 10L8 10L12 14Z" fill="#98A3AE" />
               </svg>
     
-            </div>
+            </div> -->
             
               <div class="new-cars__filter-inputs new-cars__filter-tabs--item">
                 <div class="new-cars__filter-inputs-prices">
@@ -183,8 +193,15 @@
 
           <div id="filter-tab_2" class="new-cars__filter-tabs new-cars__filter-tabs--old-cars">
             <div class="new-cars__filter-bottom-select-model  new-cars__filter-tabs--item">
+              
               <div data-select="select" class="new-cars__filter-bottom-select new-cars__filter-bottom-select--brand">
-                <div class="new-cars__filter-bottom-select-selected">
+                <select class="select-two " >
+                  <option value="1">Марка</option>
+                  <option value="2">Chery</option>
+                  <option value="3">Опция 3</option>
+                  <option value="4">Опция 4</option>
+                </select>
+                <!-- <div class="new-cars__filter-bottom-select-selected">
                   <p class="new-cars__filter-bottom-select-selected-text">
                     Марка
                   </p>
@@ -204,12 +221,18 @@
       
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 14L16 10L8 10L12 14Z" fill="#98A3AE" />
-                </svg>
+                </svg> -->
       
               </div>
 
               <div data-select="select" class="new-cars__filter-bottom-select new-cars__filter-bottom-select--model">
-                <div class="new-cars__filter-bottom-select-selected">
+                <select class="select-two">
+                  <option value="1">Марка</option>
+                  <option value="2">Chery</option>
+                  <option value="3">Опция 3</option>
+                  <option value="4">Опция 4</option>
+                </select>
+                <!-- <div class="new-cars__filter-bottom-select-selected">
                   <p class="new-cars__filter-bottom-select-selected-text">
                     Модель
                   </p>
@@ -229,7 +252,7 @@
       
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 14L16 10L8 10L12 14Z" fill="#98A3AE" />
-                </svg>
+                </svg> -->
       
               </div>
             </div>
@@ -257,7 +280,13 @@
               </div>
 
               <div data-select="select" class="new-cars__filter-bottom-select new-cars__filter-tabs--item new-cars__filter-bottom-select--transmission">
-                <div class="new-cars__filter-bottom-select-selected">
+                <select class="select-two">
+                  <option value="1">КПП</option>
+                  <option value="2">Chery</option>
+                  <option value="3">Опция 3</option>
+                  <option value="4">Опция 4</option>
+                </select>
+                <!-- <div class="new-cars__filter-bottom-select-selected">
                   <p class="new-cars__filter-bottom-select-selected-text">
                     КПП
                   </p>
@@ -276,12 +305,18 @@
       
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 14L16 10L8 10L12 14Z" fill="#98A3AE" />
-                </svg>
+                </svg> -->
       
               </div>
 
               <div data-select="select" class="new-cars__filter-bottom-select new-cars__filter-tabs--item new-cars__filter-bottom-select--drive">
-                <div class="new-cars__filter-bottom-select-selected">
+                <select class="select-two">
+                  <option value="1">Привод</option>
+                  <option value="2">Chery</option>
+                  <option value="3">Опция 3</option>
+                  <option value="4">Опция 4</option>
+                </select>
+                <!-- <div class="new-cars__filter-bottom-select-selected">
                   <p class="new-cars__filter-bottom-select-selected-text">
                     Привод
                   </p>
@@ -300,12 +335,18 @@
       
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 14L16 10L8 10L12 14Z" fill="#98A3AE" />
-                </svg>
+                </svg> -->
       
               </div>
 
               <div data-select="select" class="new-cars__filter-bottom-select new-cars__filter-tabs--item new-cars__filter-bottom-select--frame">
-                <div class="new-cars__filter-bottom-select-selected">
+                <select class="select-two">
+                  <option value="1">Тип кузова</option>
+                  <option value="2">Chery</option>
+                  <option value="3">Опция 3</option>
+                  <option value="4">Опция 4</option>
+                </select>
+                <!-- <div class="new-cars__filter-bottom-select-selected">
                   <p class="new-cars__filter-bottom-select-selected-text">
                     Тип кузова
                   </p>
@@ -327,7 +368,7 @@
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 14L16 10L8 10L12 14Z" fill="#98A3AE" />
                 </svg>
-      
+       -->
               </div>
 
               <button class="new-cars__filter-btn-mobile-open-wrap">
@@ -382,7 +423,7 @@
             Найдено 4 590 авто
           </h2>
     
-          <div data-select="select" class="all-auto__top-filter">
+          <div data-select="selectt" class="all-auto__top-filter">
             <div class="all-auto__top-filter-selected">
               <p class="all-auto__top-filter-selected-text">
                 Рекомендуемое
@@ -1658,6 +1699,7 @@ data-bg-mobile="images/form/form-mobil.jpg">
 <div class="compare-popup">
   <div class="compare-popup__wrap">
   <div class="compare-popup__head">
+    <div class="compare-popup__head-top">
     <h6 class="compare-popup__head-title">
       Добавлено к сравнению
     </h6>
@@ -1667,9 +1709,11 @@ data-bg-mobile="images/form/form-mobil.jpg">
       </svg> 
     </div>
   </div>
+  
   <p class="compare-popup__text">
    <span class="compare-popup__text-sum">2</span>  автомобиля
   </p>
+</div>
   <div class="compare-popup__buttons">
     <button class="compare-popup__btn">
       Сравнить выбранные
@@ -2009,8 +2053,9 @@ data-bg-mobile="images/form/form-mobil.jpg">
 
 </div>
     </div>  
- 
-    <script src="js/libs.min.js?_v=20241105141546"></script>
-    <script src="js/app.min.js?_v=20241105141546"></script>
+    
+    <script src="js/libs.min.js?_v=20241108165328"></script>
+    <script src="js/app.min.js?_v=20241108165328"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js?_v=20241108165328"></script>
   </body>
 </html>

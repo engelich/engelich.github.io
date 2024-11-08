@@ -1,0 +1,2925 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VictoryGroup</title>
+
+  <meta name="description" content="Разаработака Web-интерфейсов">
+  <!-- <meta property="og:type" content="website">
+  <meta property="og:url" content="Ахметов Энгель">
+  <meta property="og:title" content="Frontend-Разработчик">
+  <meta property="og:description" content="Создания привлекательных и удобных пользовательских интерфейсов.">
+  <meta property="og:image:type" content="images/photo.jpg"> 
+  <meta property="og:image:width" content="245">
+  <meta property="og:image:height" content="245">
+  <meta property="og:image:type" content="images/photo.webp">
+  <meta property="og:image:width" content="245">
+  <meta property="og:image:height" content="245"> -->
+  <link rel="icon" href="images/favicon.png">
+  <link rel="icon" href="images/favicon.ico"> 
+  <link rel="icon" type="image/x-icon" href="images/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+
+ 
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap&_v=20241108165328" rel="stylesheet"> -->
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css?_v=20241108165328" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20241108165328">
+  <link rel="stylesheet" href="css/libs.min.css?_v=20241108165328">
+</head>
+  <body>
+
+    <div class="wrapper">
+      <header class="header">
+
+  <div class="container">
+    <div class="header__main">
+      <div class="header__main-top">
+
+        <a class="header__main-logo" href="index.html">
+          <img src="images/logo.svg" alt="logo">
+        </a>
+
+        <nav class="header__main-nav">
+          <ul class="header__main-nav-wrap">
+            <li class="header__main-nav-item"><a href="index.html" class="header__main-nav-link">Главная</a></li>
+            <li class="header__main-nav-item"><a href="new-cars.html" class="header__main-nav-link">Новые авто</a></li>
+            <li class="header__main-nav-item"><a href="used-cars.html" class="header__main-nav-link">Авто с
+                пробегом</a></li>
+            <li class="header__main-nav-item">
+              <a href="#" class="header__main-nav-link">Услуги</a>
+              <ul class="header__main-nav-link-submenu">
+                <li><a href="auto-credit.html" class="header__main-nav-link-submenu-link">Автокредит</a></li>
+                <li><a href="trade-in.html" class="header__main-nav-link-submenu-link">Trade-in</a></li>
+                <li><a href="ransom.html" class="header__main-nav-link-submenu-link">Выкуп</a></li>
+              </ul>
+            </li>
+            <li class="header__main-nav-item"><a href="stock.html" class="header__main-nav-link">Акции</a></li>
+            <li class="header__main-nav-item"><a href="contacts.html" class="header__main-nav-link">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="header__main-right">
+          <div class="header__main-right-geo">
+            <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g clip-path="url(#clip6_12292)">
+                <path id="Icon"
+                  d="M12 13C10.34 13 9 11.65 9 10C9 8.34 10.34 7 12 7C13.65 7 15 8.34 15 10C15 11.65 13.65 13 12 13ZM12 22C8 18 4 14.41 4 10C4 5.58 7.58 2 12 2C16.41 2 20 5.58 20 10C20 14.41 16 18 12 22Z"
+                  stroke="#DC4729" stroke-opacity="1.000000" stroke-width="1.000000" stroke-linejoin="round" />
+              </g>
+            </svg>
+            <a href="#">г. Санкт-Петербург</a>
+
+          </div>
+          <button data-popup="popup-open"  class="header__main-right-button">
+            Связаться
+          </button>
+          <div class="header__main-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+      </div>
+      <div class="header__main-mobil">
+        <a href="new-cars.html" class="header__main-mobil-item">
+          <h3 class="header__main-mobil-item-title">
+            Новые автомобили
+          </h3>
+          <picture><source srcset="images/header/header-new.webp" type="image/webp"><img src="images/header/header-new.png" alt="images"></picture>
+        </a>
+        <a href="used-cars.html" class="header__main-mobil-item">
+          <h3 class="header__main-mobil-item-title">
+            Автомобили с пробегом
+          </h3>
+          <picture><source srcset="images/header/header-old.webp" type="image/webp"><img src="images/header/header-old.png" alt="images"></picture>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+
+
+</header>
+      <main class="main">
+      <div class="detal-breadcrumbs detal-breadcrumbs--compare">
+
+
+  <div class="container">
+    <nav class="detal-breadcrumbs__nav">
+      <ul>
+        <li><a href="#">Главная</a></li>
+        <li class="detal-breadcrumbs__nav-separator">
+          <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="2" cy="2" r="2" fill="#DDE3EE" />
+          </svg>
+
+
+
+        </li>
+        <li><a href="#">Новые авто</a></li>
+
+        <li class="detal-breadcrumbs__nav-separator">
+          <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="2" cy="2" r="2" fill="#DDE3EE" />
+          </svg>
+
+        </li>
+        <li><a href="#">Chery</a></li>
+        <li class="detal-breadcrumbs__nav-separator">
+          <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="2" cy="2" r="2" fill="#DDE3EE" />
+          </svg>
+
+        </li>
+        <li>Chery Tiggo</li>
+      </ul>
+    </nav>
+  </div>
+
+</div>
+
+<section class="compare-detal">
+  <div class="container">
+
+ 
+  <div class="compare-detal__head">
+    <div class="compare-detal__head-context">
+      <h1 class="compare-detal__head-context-title">
+        Сравнение комплектаций <span class="compare-detal__head-context-num">(19)</span> 
+      </h1>
+      <p class="compare-detal__head-context-subtitle">
+        Chery Tiggo 4 Pro 18 YEARS EDITION
+      </p>
+    </div>
+    <div class="compare-detal__head-button">
+      
+        <input type="checkbox" id="trade-in" class="compare-detal__head-checkbox" aria-label="Скидка по Trade-in">
+        <label for="trade-in" class="compare-detal__head-label" >
+          <span class="compare-detal__head-ball"></span>
+        </label>
+        <label for="trade-in" class="compare-detal__head-text">
+          Только различия
+        </label>
+      
+    </div>
+  </div>
+</div>
+
+<div class="compare-detal__about">
+
+  <div class="swiper compare-detal__swiper">
+    <div class="swiper-wrapper compare-detal__wrapper">
+
+      <div class="swiper-slide compare-detal__slide">
+        <div href="#" class="compare-detal__slide-wrap">
+          <a href="#" class="compare-detal__slide-title">
+            Специальная Серия «Sportline» Comfort
+          </a>
+          <svg class="close-btn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M17 7L7 17M7 7L17 17" stroke="#0E0E0E" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p class="compare-detal__slide-price">
+          1 409 000 ₽
+        </p>
+      </div>
+
+      <div class="swiper-slide compare-detal__slide">
+        <div href="#" class="compare-detal__slide-wrap">
+          <a href="#" class="compare-detal__slide-title">
+            Специальная Серия «‎Sportline» Comfort
+          </a>
+          <svg class="close-btn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M17 7L7 17M7 7L17 17" stroke="#0E0E0E" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <p class="compare-detal__slide-price">
+          2 409 000 ₽
+        </p>
+      </div>
+
+      <div class="swiper-slide compare-detal__slide">
+        <div href="#" class="compare-detal__slide-wrap">
+          <a href="#" class="compare-detal__slide-title">
+            Специальная Серия «‎Sportline» Comfort
+          </a>
+          <svg class="close-btn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M17 7L7 17M7 7L17 17" stroke="#0E0E0E" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <p class="compare-detal__slide-price">
+          3 409 000 ₽
+        </p>
+      </div>
+
+      <div class="swiper-slide compare-detal__slide">
+        <div href="#" class="compare-detal__slide-wrap">
+          <a href="#" class="compare-detal__slide-title">
+            Специальная Серия «‎Sportline» Comfort
+          </a>
+          <svg class="close-btn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M17 7L7 17M7 7L17 17" stroke="#0E0E0E" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <p class="compare-detal__slide-price">
+          4 409 000 ₽
+        </p>
+      </div>
+
+      <div class="swiper-slide compare-detal__slide">
+        <div href="#" class="compare-detal__slide-wrap">
+          <a href="#" class="compare-detal__slide-title">
+            Специальная Серия «‎Sportline» Comfort
+          </a>
+          <svg class="close-btn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M17 7L7 17M7 7L17 17" stroke="#0E0E0E" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <p class="compare-detal__slide-price">
+          5 409 000 ₽
+        </p>
+      </div>
+
+
+
+    </div>
+    <div class="compare-auto__buttons">
+
+
+
+      <div class="swiper-button-prev compare-detal__prev compare-auto__buttons-btn">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.334 8H2.66732M2.66732 8L6.66732 4M2.66732 8L6.66732 12" stroke="white" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </div>
+
+      <div class="swiper-pagination compare-auto__pagination compare-detal__pagination"></div>
+
+      <div class="swiper-button-next compare-detal__next compare-auto__buttons-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M2.66602 8H13.3327M13.3327 8L9.33268 4M13.3327 8L9.33268 12" stroke="white"
+            stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="compare-detal__inner">
+
+  <div class="compare-detal__accordion">
+    <div class="compare-detal__accordion-head">
+      <table>
+        <tr>
+          <td>Безопасность</td>
+          <td></td>
+          <td>
+            <p>13 опций</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M8 12L12 16M12 16L16 12M12 16V8M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#0E0E0E" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+              
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="compare-detal__accordion-content">
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Крепления для детского кресла ISOFIX
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal close active">+</p>  
+                
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal close">—</p>
+                  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal close">+</p>  
+                
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal close">+ </p> 
+              
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal close">—</p>  
+                
+              </div>
+    
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Система предупреждения бокового столкновения при выезде с парковки задним ходом (RCCW)
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Иммобилайзер
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Крепления для детского кресла ISOFIX
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Система предупреждения бокового столкновения при выезде с парковки задним ходом (RCCW)
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Иммобилайзер
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Система предупреждения бокового столкновения при выезде с парковки задним ходом (RCCW)
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="compare-detal__accordion">
+    <div class="compare-detal__accordion-head">
+      <table>
+        <tr>
+          <td>Безопасность</td>
+          <td></td>
+          <td>
+            <p>13 опций</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M8 12L12 16M12 16L16 12M12 16V8M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#0E0E0E" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+              
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="compare-detal__accordion-content">
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Крепления для детского кресла ISOFIX
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Система предупреждения бокового столкновения при выезде с парковки задним ходом (RCCW)
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Иммобилайзер
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Крепления для детского кресла ISOFIX
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Система предупреждения бокового столкновения при выезде с парковки задним ходом (RCCW)
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Иммобилайзер
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Система предупреждения бокового столкновения при выезде с парковки задним ходом (RCCW)
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="compare-detal__accordion">
+    <div class="compare-detal__accordion-head">
+      <table>
+        <tr>
+          <td>Безопасность</td>
+          <td></td>
+          <td>
+            <p>13 опций</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M8 12L12 16M12 16L16 12M12 16V8M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#0E0E0E" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+              
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="compare-detal__accordion-content">
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Крепления для детского кресла ISOFIX
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Система предупреждения бокового столкновения при выезде с парковки задним ходом (RCCW)
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Иммобилайзер
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Крепления для детского кресла ISOFIX
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Система предупреждения бокового столкновения при выезде с парковки задним ходом (RCCW)
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Иммобилайзер
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Система предупреждения бокового столкновения при выезде с парковки задним ходом (RCCW)
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="compare-detal__accordion">
+    <div class="compare-detal__accordion-head">
+      <table>
+        <tr>
+          <td>Безопасность</td>
+          <td></td>
+          <td>
+            <p>13 опций</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M8 12L12 16M12 16L16 12M12 16V8M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#0E0E0E" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+              
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="compare-detal__accordion-content">
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Крепления для детского кресла ISOFIX
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Система предупреждения бокового столкновения при выезде с парковки задним ходом (RCCW)
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Иммобилайзер
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Крепления для детского кресла ISOFIX
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Система предупреждения бокового столкновения при выезде с парковки задним ходом (RCCW)
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Иммобилайзер
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Система предупреждения бокового столкновения при выезде с парковки задним ходом (RCCW)
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="compare-detal__accordion">
+    <div class="compare-detal__accordion-head">
+      <table>
+        <tr>
+          <td>Безопасность</td>
+          <td></td>
+          <td>
+            <p>13 опций</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M8 12L12 16M12 16L16 12M12 16V8M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#0E0E0E" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+              
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="compare-detal__accordion-content">
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Крепления для детского кресла ISOFIX
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Система предупреждения бокового столкновения при выезде с парковки задним ходом (RCCW)
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Иммобилайзер
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Крепления для детского кресла ISOFIX
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Система предупреждения бокового столкновения при выезде с парковки задним ходом (RCCW)
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Иммобилайзер
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Система предупреждения бокового столкновения при выезде с парковки задним ходом (RCCW)
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="compare-detal__accordion">
+    <div class="compare-detal__accordion-head">
+      <table>
+        <tr>
+          <td>Безопасность</td>
+          <td></td>
+          <td>
+            <p>13 опций</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M8 12L12 16M12 16L16 12M12 16V8M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#0E0E0E" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+              
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="compare-detal__accordion-content">
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Крепления для детского кресла ISOFIX
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Система предупреждения бокового столкновения при выезде с парковки задним ходом (RCCW)
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Иммобилайзер
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Крепления для детского кресла ISOFIX
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Система предупреждения бокового столкновения при выезде с парковки задним ходом (RCCW)
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Иммобилайзер
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-detal__info">
+        <p class="compare-detal__info-title">
+          Система предупреждения бокового столкновения при выезде с парковки задним ходом (RCCW)
+        </p>
+        <div class="compare-detal__head-swiper">
+          <div class="swiper compare-detal__swiper">
+            <div class="swiper-wrapper compare-detal__wrapper">
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+</p>  
+              </div>
+    
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">+ </p>  
+              </div>
+
+              <div class="swiper-slide compare-detal__slide compare-detal__slide--all">
+                <p class="compare-detal__slide-detal">—</p>  
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</section>
+      </main>
+      <footer class="footer">
+  <div class="container">
+
+    <div class="footer__inner">
+      <div class="footer__logo footer__inner-item">
+        <div class="footer__logo-wrap">
+          <a href="/">
+            <img src="images/logo.svg" alt="logo">
+          </a>
+
+          <p class="footer__logo-text">
+            Автосалон новых и б/у автомобилей из Китая
+          </p>
+        </div>
+
+
+      </div>
+      <div class="footer__navigation footer__inner-item">
+        <nav class="footer__navigation-nav">
+          <ul class="footer__navigation-nav-wrap">
+
+            <li class="footer__navigation-nav-item">
+              <a href="/new-cars.html" class="footer__navigation-nav-link">Новые авто</a>
+            </li>
+            <li class="footer__navigation-nav-item">
+              <a href="/used-cars.html" class="footer__navigation-nav-link">Авто с пробегом</a>
+            </li>
+            <li class="footer__navigation-nav-item">
+              <a href="/auto-credit.html" class="footer__navigation-nav-link">Автокредит</a>
+            </li>
+            <li class="footer__navigation-nav-item">
+              <a href="/tradi-in.html" class="footer__navigation-nav-link">Trade-in</a>
+            </li>
+            <li class="footer__navigation-nav-item">
+              <a href="/ransom.html" class="footer__navigation-nav-link">Выкуп</a>
+            </li>
+            <li class="footer__navigation-nav-item">
+              <a href="/stock.html" class="footer__navigation-nav-link">Акции</a>
+            </li>
+            <li class="footer__navigation-nav-item">
+              <a href="#" class="footer__navigation-nav-link">Отзывы</a>
+            </li>
+            <li class="footer__navigation-nav-item">
+              <a href="/cotacts.html" class="footer__navigation-nav-link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="footer__brands">
+          <h4 class="footer__brands-title">
+            Бренды
+          </h4>
+          <nav class="footer__brands-nav">
+            <ul class="footer__brands-nav-wrap">
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">BAIC</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Chery</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Exeed</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">GAC</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Great Wall</a>
+              </li>
+            </ul>
+            <ul class="footer__brands-nav-wrap">
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Hongqi</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Jaecoo</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Jetta</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">LiXiang</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Voyah</a>
+              </li>
+            </ul>
+            <ul class="footer__brands-nav-wrap">
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Changan</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Dongfeng</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">FAW</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Gelly</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Haval</a>
+              </li>
+            </ul>
+            <ul class="footer__brands-nav-wrap">
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">JAC</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Jetour</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Kaiyi</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Skywell</a>
+              </li>
+              <li class="footer__brands-nav-item">
+                <a href="#" class="footer__brands-nav-link">Zeekr</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="footer__contacts footer__inner-item">
+        <h4 class="footer__contacts-title">
+          Контакты
+        </h4>
+        <div class="footer__contacts-geo">
+          <h5 class="footer__contacts-geo-title">
+            Адрес
+          </h5>
+          <p class="footer__contacts-geo-text">
+            г. Краснодар, Республика Адыгея, поселок Яблоновский, улица Краснодарская, 3
+          </p>
+        </div>
+        <div class="footer__contacts-time">
+          <h5 class="footer__contacts-time-title">
+            График работы
+          </h5>
+          <p class="footer__contacts-time-text">
+            Ежедневно с <span>9:00</span>до <span>20:00</span>
+          </p>
+        </div>
+        <div class="footer__contacts-connection">
+          <a href="tel:80000000000" class="footer__contacts-phone">
+            8 (000) 000-00-00
+          </a>
+          <button data-popup="popup-open" class="footer__contacts-btn">
+            Заказать звонок
+          </button>
+        </div>
+
+      </div>
+
+      <div id="map" class="footer__contacts-map lazy footer__inner-item lazy-load" data-src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A32e1f119ea495757f0035ef24391ce13fcd1c7c9dc6400200b6e7979494fcb41&amp;width=100%25&amp;height=330&amp;lang=ru_RU&amp;scroll=true">
+      
+        <div class="footer__contacts-map-config"></div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__bottom-text">
+        Маркетинговая ставка по кредиту - от 18% не является процентной ставкой по кредитному договору, а выражает
+        процентный размер расходов физ. лица на приобретение авто за счет кредита. Разница между маркетинговой ставкой и
+        процентной ставкой компенсируется посредством соразмерного снижения дилером цены на ТС, доп.оборудование на
+        усмотрение дилера. Валюта кредита — рубль РФ. Первоначальный взнос до 90%, сумма кредита от 350 000 р. до 7 000
+        000 р., срок кредита до 84 мес.; процентная ставка от 29,4%. При обязательном условии страхования жизни, КАСКО в
+        страховых компаниях-партнерах на весь срок действия кредитного договора, а также покупки доп.оборудования.
+      </p>
+    </div>
+  </div>
+</footer>
+
+      <div class="header-popup">
+  <div class="container">
+    <div class="header-popup__links">
+      <nav class="header-popup__nav">
+        <ul>
+          <li class="header-popup__nav-item"><a href="index.html" class="header-popup__nav-link">Главная</a></li>
+          <li class="header-popup__nav-item"><a href="new-cars.html" class="header-popup__nav-link">Новые авто</a></li>
+          <li class="header-popup__nav-item"><a href="used-cars.html" class="header-popup__nav-link">Авто с
+              пробегом</a></li>
+          <li class="header-popup__nav-item header-popup__nav-item--services">
+            <a href="#" class="header-popup__nav-link header-popup__nav-link--services">
+              <p>Услуги</p>
+              <svg width="8" height="4" viewBox="0 0 8 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4L8 4.76837e-07L1.74846e-07 -3.49691e-07L4 4Z" fill="#98A3AE" />
+              </svg>
+            </a>
+            <div class="header-popup__nav-link-submenu-wrap">
+              <ul class="header-popup__nav-link-submenu" id="mobil-submenu" style="min-height:0px">
+                <li><a href="auto-credit.html" class="header-popup__nav-link-submenu-link">Автокредит</a></li>
+                <li><a href="trade-in.html" class="header-popup__nav-link-submenu-link">Trade-in</a></li>
+                <li><a href="ransom.html" class="header-popup__nav-link-submenu-link">Выкуп</a></li>
+              </ul>
+            </div>
+
+          </li>
+          <li class="header-popup__nav-item"><a href="#" class="header-popup__nav-link">Акции</a></li>
+          <li class="header-popup__nav-item"><a href="#" class="header-popup__nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-popup__info">
+      <a class="header-popup__info-phone" href="tel:80000000000">8 (000) 000-00-00</a>
+      <button data-popup="popup-open" class="header-popup__info-btn">
+        Заказать звонок
+      </button>
+      <p class="header-popup__info-geo">
+        г. Краснодар, Республика Адыгея, поселок Яблоновский, улица Краснодарская, 3
+      </p>
+      <p class="header-popup__info-time">
+        Ежедневно с <span>9:00</span> до <span>20:00</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="window-popup">
+
+
+
+  <div class="window-popup-inner">
+    <div class="window-popup-advertising">
+      <picture><source srcset="images/popup/modal-img.webp" type="image/webp"><img src="images/popup/modal-img.png" alt=""></picture>
+
+    </div>
+
+    <div class="window-popup-content">
+      <div class="window-popup-top">
+        <h4 class="window-popup-top-title">
+          Заголовок формы обратной связи в три строки
+        </h4>
+        <div class="window-popup-close">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" fill="white" />
+            <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="#DDE3EE" />
+            <path d="M29 19L19 29M19 19L29 29" stroke="#0E0E0E" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </div>
+      <h5 class="window-popup-subtitle">
+        Подзаголовок
+      </h5>
+          <p class="window-popup-text">
+            Заполните форму и отправьте заявку. Мы свяжемся с вами в ближайшее время для подтверждения брони
+          </p>
+          <div class="window-popup-error" style="color: red; display: none;"></div>
+          <form class="window-popup-form">
+            <input class="window-popup-form-input" type="text" placeholder="Имя">
+            <input class="window-popup-form-input art-stranger" type="tel" placeholder="+7 (000) 000-00-00">
+            <input class="window-popup-form-btn" type="submit" value="Отправить заявку">
+          </form>
+
+          <a href="#" class="window-popup-confidentiality">
+            Отправляя заявку, я соглашаюсь с условиями <span>пользовательского соглашения</span>
+          </a>
+    </div>
+
+
+  </div>
+</div>
+<div class="window-popup-ok">
+  <div class="container">
+    <div class="window-popup-ok-inner">
+      <div class="window-popup-ok-top">
+        <img src="images/popup/modal-ok.svg" alt="image">
+        <h3 class="window-popup-ok-top-title">
+          Ваша заявка успешно отправлена!
+        </h3>
+      </div>
+      <p class="window-popup-ok-text">
+        Мы свяжемся с вами в ближайшее время
+      </p>
+      <div class="window-popup-ok-close-btn">
+        Хорошо
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="detal-popup">
+  <div class="detal-popup__header">
+    <h5 class="detal-popup__header-title">
+      Опции комплектации
+    </h5>
+    <div class="detal-popup__header-close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M17 7L7 17M7 7L17 17" stroke="#0E0E0E" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </div>
+
+  </div>
+  <div class="container">
+    <h3 class="detal-popup__title">
+      Chery Tiggo 4 Pro 18 YEARS EDITION
+    </h3>
+
+    <div class="detal-popup__modification">
+      <h6 class="detal-popup__modification-title">
+        Модификация
+      </h6>
+      <p class="detal-popup__modification-subtitle">
+        2.0 Л., 6АКПП (249 Л.С) FWD
+      </p>
+    </div>
+    
+    <div class="detal-popup__equipment">
+      <h6 class="detal-popup__equipment-title">
+        Комплектация
+      </h6>
+      <p class="detal-popup__equipment-subtitle">
+        Специальная Серия «‎Sportline» Comfort
+      </p>
+    </div>
+
+    <div class="detal-popup__price">
+      <h6 class="detal-popup__price-title">
+        Цена
+      </h6>
+      <div class="detal-popup__price-wrap">
+        <p class="detal-popup__price-old">
+          17 800 000 ₽
+        </p>
+        <div class="detal-popup__price-actual price-actual">
+          <p class="detal-popup__price-actual-sum">
+            17 800 000 ₽
+          </p>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.09 9C9.3251 8.33167 9.78915 7.76811 10.4 7.40913C11.0108 7.05016 11.7289 6.91894 12.4272 7.03871C13.1255 7.15849 13.7588 7.52152 14.2151 8.06353C14.6713 8.60553 14.9211 9.29152 14.92 10C14.92 12 11.92 13 11.92 13M12 17H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#0E0E0E" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg> 
+          <div class="price-popup price-popup">
+            <div class="price-popup-top">
+              <p>Цена с учетом максимальной выгоды:</p>
+              <p>Скидка за Trade-in: <span>- 800 000 ₽</span></p>
+              <p>Скидка за кредит:  <span>- 600 000 ₽</span></p>
+              <p>Специальная скидка месяца:  <span>- 600 000 ₽</span></p>
+            </div>
+            <div class="price-popup-bottom">
+              <p>Минимально возможная стоимость
+                при покупке за наличные:  <span>4 800 000 ₽ </span></p>
+            </div>
+          </div> 
+        </div>  
+      </div>
+
+     
+    </div>
+
+    <div class="detal-popup__inner">
+
+    
+    <div class="detal-popup__accordion">
+      <div class="detal-popup__accordion-header">
+        <h5 class="detal-popup__accordion-header-title">
+          Технические характеристики
+        </h5>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 12L12 16M12 16L16 12M12 16L12 8M22 12C22 17.5229 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47716 22 12Z" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+      </div>
+      <div class="detal-popup__accordion-content">
+        <div class="detal-popup__accordion-content-characteristics">
+          <table>
+            <tr>
+                <td>Тип двигателя</td>
+                
+                <td>рядный, 4-х цилиндровый с турбонагнетателем</td>
+            </tr>
+            <tr>
+                <td>Рабочий объем двигателя см³</td>
+
+                <td>1392</td>
+            </tr>
+            <tr>
+                <td>Максимальная мощность кВт/л.с. (мин.-1)</td>
+                
+                <td>110/150 (5500)</td>
+            </tr>
+            <tr>
+                <td>Максимальный крутящий момент Н•м (мин.-1)</td>
+                
+                <td>255 (2000-4000)</td>
+            </tr>
+            <tr>
+                <td>Коробка передач</td>
+                
+                <td>7-ми ступенчатая роботизированная</td>
+            </tr>
+            <tr>
+                <td>Тип привода</td>
+                
+                <td>передний</td>
+            </tr>
+            <tr>
+                <td>Передняя подвеска</td>
+                
+                <td>независимая, типа McPherson</td>
+            </tr>
+            <tr>
+                <td>Задняя подвеска</td>
+                
+                <td>полузависимая с торсионной балкой, дисковые вентилируемые / дисковые</td>
+            </tr>
+            <tr>
+                <td>Длина/ширина (без зеркал) [высота (без загрузки) (мм)]</td>
+                
+                <td>4730/1820/1505</td>
+            </tr>
+        </table>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="detal-popup__accordion">
+      <div class="detal-popup__accordion-header">
+        <h5 class="detal-popup__accordion-header-title">
+          Безопасность
+        </h5>
+        <div class="detal-popup__accordion-header-right">
+          <p class="detal-popup__accordion-header-right-text">
+            (<span class="detal-popup__accordion-header-right-number">5</span>)
+          </p>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 12L12 16M12 16L16 12M12 16L12 8M22 12C22 17.5229 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47716 22 12Z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        
+
+      </div>
+      <div class="detal-popup__accordion-content">
+        <ul class="detal-popup__accordion-content-list">
+          <li>Система предупреждения бокового столкновения при выезде с парковки задним ходом (RCCW)</li>
+          <li>Система предупреждения бокового столкновения при выезде с парковки задним ходом (RCCW)</li>
+          <li>Крепления для детского кресла ISOFIX</li>
+          <li>Крепления для детского кресла ISOFIX</li>
+          <li>Запасное колесо временного использования</li>
+          <li>Запасное колесо временного использования</li>
+          <li>Иммобилайзер</li>
+          <li>Иммобилайзер</li>
+
+          <li>Система предупреждения бокового столкновения при выезде с парковки задним ходом (RCCW)</li>
+          <li>Система предупреждения бокового столкновения при выезде с парковки задним ходом (RCCW)</li>
+          <li>Крепления для детского кресла ISOFIX</li>
+          <li>Крепления для детского кресла ISOFIX</li>
+          <li>Запасное колесо временного использования</li>
+          <li>Запасное колесо временного использования</li>
+          <li>Иммобилайзер</li>
+          <li>Иммобилайзер</li>
+      </ul>
+        
+      </div>
+    </div>
+
+    <div class="detal-popup__accordion">
+      <div class="detal-popup__accordion-header">
+        <h5 class="detal-popup__accordion-header-title">
+          Интерьер
+        </h5>
+        <div class="detal-popup__accordion-header-right">
+          <p class="detal-popup__accordion-header-right-text">
+            (<span class="detal-popup__accordion-header-right-number">17</span>)
+          </p>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 12L12 16M12 16L16 12M12 16L12 8M22 12C22 17.5229 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47716 22 12Z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+      </div>
+      <div class="detal-popup__accordion-content">
+        <div class="detal-popup__accordion-content-characteristics">
+          <table>
+            <tr>
+                <td>Тип двигателя</td>
+                
+                <td>рядный, 4-х цилиндровый с турбонагнетателем</td>
+            </tr>
+            <tr>
+                <td>Рабочий объем двигателя см³</td>
+
+                <td>1392</td>
+            </tr>
+            <tr>
+                <td>Максимальная мощность кВт/л.с. (мин.-1)</td>
+                
+                <td>110/150 (5500)</td>
+            </tr>
+            <tr>
+                <td>Максимальный крутящий момент Н•м (мин.-1)</td>
+                
+                <td>255 (2000-4000)</td>
+            </tr>
+            <tr>
+                <td>Коробка передач</td>
+                
+                <td>7-ми ступенчатая роботизированная</td>
+            </tr>
+            <tr>
+                <td>Тип привода</td>
+                
+                <td>передний</td>
+            </tr>
+            <tr>
+                <td>Передняя подвеска</td>
+                
+                <td>независимая, типа McPherson</td>
+            </tr>
+            <tr>
+                <td>Задняя подвеска</td>
+                
+                <td>полузависимая с торсионной балкой, дисковые вентилируемые / дисковые</td>
+            </tr>
+            <tr>
+                <td>Длина/ширина (без зеркал) [высота (без загрузки) (мм)]</td>
+                
+                <td>4730/1820/1505</td>
+            </tr>
+        </table>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="detal-popup__accordion">
+      <div class="detal-popup__accordion-header">
+        <h5 class="detal-popup__accordion-header-title">
+          Экстерьер
+        </h5>
+        <div class="detal-popup__accordion-header-right">
+          <p class="detal-popup__accordion-header-right-text">
+            (<span class="detal-popup__accordion-header-right-number">13</span>)
+          </p>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 12L12 16M12 16L16 12M12 16L12 8M22 12C22 17.5229 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47716 22 12Z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+      </div>
+      <div class="detal-popup__accordion-content">
+        <div class="detal-popup__accordion-content-characteristics">
+          <table>
+            <tr>
+                <td>Тип двигателя</td>
+                
+                <td>рядный, 4-х цилиндровый с турбонагнетателем</td>
+            </tr>
+            <tr>
+                <td>Рабочий объем двигателя см³</td>
+
+                <td>1392</td>
+            </tr>
+            <tr>
+                <td>Максимальная мощность кВт/л.с. (мин.-1)</td>
+                
+                <td>110/150 (5500)</td>
+            </tr>
+            <tr>
+                <td>Максимальный крутящий момент Н•м (мин.-1)</td>
+                
+                <td>255 (2000-4000)</td>
+            </tr>
+            <tr>
+                <td>Коробка передач</td>
+                
+                <td>7-ми ступенчатая роботизированная</td>
+            </tr>
+            <tr>
+                <td>Тип привода</td>
+                
+                <td>передний</td>
+            </tr>
+            <tr>
+                <td>Передняя подвеска</td>
+                
+                <td>независимая, типа McPherson</td>
+            </tr>
+            <tr>
+                <td>Задняя подвеска</td>
+                
+                <td>полузависимая с торсионной балкой, дисковые вентилируемые / дисковые</td>
+            </tr>
+            <tr>
+                <td>Длина/ширина (без зеркал) [высота (без загрузки) (мм)]</td>
+                
+                <td>4730/1820/1505</td>
+            </tr>
+        </table>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="detal-popup__accordion">
+      <div class="detal-popup__accordion-header">
+        <h5 class="detal-popup__accordion-header-title">
+          Комфорт и удобство
+        </h5>
+        <div class="detal-popup__accordion-header-right">
+          <p class="detal-popup__accordion-header-right-text">
+            (<span class="detal-popup__accordion-header-right-number">8</span>)
+          </p>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 12L12 16M12 16L16 12M12 16L12 8M22 12C22 17.5229 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47716 22 12Z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+      </div>
+      <div class="detal-popup__accordion-content">
+        <div class="detal-popup__accordion-content-characteristics">
+          <table>
+            <tr>
+                <td>Тип двигателя</td>
+                
+                <td>рядный, 4-х цилиндровый с турбонагнетателем</td>
+            </tr>
+            <tr>
+                <td>Рабочий объем двигателя см³</td>
+
+                <td>1392</td>
+            </tr>
+            <tr>
+                <td>Максимальная мощность кВт/л.с. (мин.-1)</td>
+                
+                <td>110/150 (5500)</td>
+            </tr>
+            <tr>
+                <td>Максимальный крутящий момент Н•м (мин.-1)</td>
+                
+                <td>255 (2000-4000)</td>
+            </tr>
+            <tr>
+                <td>Коробка передач</td>
+                
+                <td>7-ми ступенчатая роботизированная</td>
+            </tr>
+            <tr>
+                <td>Тип привода</td>
+                
+                <td>передний</td>
+            </tr>
+            <tr>
+                <td>Передняя подвеска</td>
+                
+                <td>независимая, типа McPherson</td>
+            </tr>
+            <tr>
+                <td>Задняя подвеска</td>
+                
+                <td>полузависимая с торсионной балкой, дисковые вентилируемые / дисковые</td>
+            </tr>
+            <tr>
+                <td>Длина/ширина (без зеркал) [высота (без загрузки) (мм)]</td>
+                
+                <td>4730/1820/1505</td>
+            </tr>
+        </table>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="detal-popup__accordion">
+      <div class="detal-popup__accordion-header">
+        <h5 class="detal-popup__accordion-header-title">
+          Опции связи и развлечений
+        </h5>
+        <div class="detal-popup__accordion-header-right">
+          <p class="detal-popup__accordion-header-right-text">
+            (<span class="detal-popup__accordion-header-right-number">3</span>)
+          </p>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 12L12 16M12 16L16 12M12 16L12 8M22 12C22 17.5229 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47716 22 12Z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+      </div>
+      <div class="detal-popup__accordion-content">
+        <div class="detal-popup__accordion-content-characteristics">
+          <table>
+            <tr>
+                <td>Тип двигателя</td>
+                
+                <td>рядный, 4-х цилиндровый с турбонагнетателем</td>
+            </tr>
+            <tr>
+                <td>Рабочий объем двигателя см³</td>
+
+                <td>1392</td>
+            </tr>
+            <tr>
+                <td>Максимальная мощность кВт/л.с. (мин.-1)</td>
+                
+                <td>110/150 (5500)</td>
+            </tr>
+            <tr>
+                <td>Максимальный крутящий момент Н•м (мин.-1)</td>
+                
+                <td>255 (2000-4000)</td>
+            </tr>
+            <tr>
+                <td>Коробка передач</td>
+                
+                <td>7-ми ступенчатая роботизированная</td>
+            </tr>
+            <tr>
+                <td>Тип привода</td>
+                
+                <td>передний</td>
+            </tr>
+            <tr>
+                <td>Передняя подвеска</td>
+                
+                <td>независимая, типа McPherson</td>
+            </tr>
+            <tr>
+                <td>Задняя подвеска</td>
+                
+                <td>полузависимая с торсионной балкой, дисковые вентилируемые / дисковые</td>
+            </tr>
+            <tr>
+                <td>Длина/ширина (без зеркал) [высота (без загрузки) (мм)]</td>
+                
+                <td>4730/1820/1505</td>
+            </tr>
+        </table>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+
+  <button class="detal-popup__credit-btn all--btn">
+    В кредит от 236 094 ₽/мес
+  </button>
+
+  <div class="detal-popup__compare-btn all--btn">
+    <p class="detal-popup__compare-btn-text ">
+      Сравнить все комплектации
+    </p>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 18L18 6M18 6H10M18 6V14" stroke="#66707C" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+      
+      
+  </div>
+
+
+  </div>
+</div>
+
+<div class="compare-popup">
+  <div class="compare-popup__wrap">
+  <div class="compare-popup__head">
+    <div class="compare-popup__head-top">
+    <h6 class="compare-popup__head-title">
+      Добавлено к сравнению
+    </h6>
+    <div class="compare-popup__head-close">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17 7L7 17M7 7L17 17" stroke="#0E0E0E" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg> 
+    </div>
+  </div>
+  
+  <p class="compare-popup__text">
+   <span class="compare-popup__text-sum">2</span>  автомобиля
+  </p>
+</div>
+  <div class="compare-popup__buttons">
+    <button class="compare-popup__btn">
+      Сравнить выбранные
+    </button>
+    <div class="compare-popup__btn">
+      <p class="compare-popup__btn-text">
+        Сбросить
+      </p>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 4L4 12M4 4L12 12" stroke="#66707C" stroke-width="0.666667" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="popup-vin">
+<div class="container">
+<div class="popup-vin__window">
+  <div class="popup-vin__head">
+    <h4 class="popup-vin__head-title">
+      Проверка VIN в автотеке
+    </h4>
+    <div class="popup-vin__head-close">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17 7L7 17M7 7L17 17" stroke="#0E0E0E" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="popup-vin__loading" style="display: none;">
+    <div class="popup-vin__loading-wrap">
+
+    
+    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M46.6673 36.666H26.6673M33.334 49.9994H26.6673M53.334 23.3327H26.6673M66.6673 34.9993V22.666C66.6673 17.0655 66.6673 14.2652 65.5774 12.1261C64.6187 10.2445 63.0888 8.71468 61.2072 7.75595C59.0681 6.66602 56.2678 6.66602 50.6673 6.66602H29.334C23.7335 6.66602 20.9332 6.66602 18.7941 7.75595C16.9125 8.71468 15.3827 10.2445 14.4239 12.1261C13.334 14.2652 13.334 17.0655 13.334 22.666V57.3327C13.334 62.9332 13.334 65.7335 14.4239 67.8726C15.3827 69.7542 16.9125 71.284 18.7941 72.2428C20.9332 73.3327 23.7335 73.3327 29.334 73.3327H38.334M73.334 73.3327L68.334 68.3327M71.6673 59.9994C71.6673 66.4427 66.444 71.666 60.0007 71.666C53.5573 71.666 48.334 66.4427 48.334 59.9994C48.334 53.556 53.5573 48.3327 60.0007 48.3327C66.444 48.3327 71.6673 53.556 71.6673 59.9994Z" stroke="#DC4729" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="popup-vin__loading-time">
+      <p>Осталось:  <span class="popup-vin__loading-time-clock">2:58</span></p> 
+    </div>
+    <p class="popup-vin__loading-text">
+      Подождите, собираем данные и формируем отчет
+    </p>
+  </div>
+  </div>
+
+  <div class="popup-vin__info" style="display: block;">
+
+    <div class="popup-vin__info-data">
+      <p class="popup-vin__info-data-text">
+        Дата отчета:
+      </p>
+      <span class="popup-vin__info-data-number">
+        26.11.2024
+      </span>
+    </div>
+
+    <div class="popup-vin__info-number">
+      <span class="popup-vin__info-number-vin">
+        XW7BE**K90S0****7
+      </span>
+      <p class="popup-vin__info-number-text">
+        * VIN номер скрыт из соображений безопасности
+      </p>
+    </div>
+
+    <div class="popup-vin__info-characteristics">
+      <h3 class="popup-vin__info-characteristics-title">
+        Характеристики
+      </h3>
+      <div class="popup-vin__info-characteristics-inner">
+
+        <div class="popup-vin__info-characteristics-item">
+          <h4 class="popup-vin__info-characteristics-item-title">
+            Марка, модель
+          </h4>
+          <p class="popup-vin__info-characteristics-item-meaning">
+            Chery Tiggo 4 Pro 18 YEARS EDITION
+          </p>
+        </div>
+
+        <div class="popup-vin__info-characteristics-item">
+          <h4 class="popup-vin__info-characteristics-item-title">
+            Госномер
+          </h4>
+          <p class="popup-vin__info-characteristics-item-meaning">
+            Отсутствует
+          </p>
+        </div>
+
+        <div class="popup-vin__info-characteristics-item">
+          <h4 class="popup-vin__info-characteristics-item-title">
+            Тип ТС
+          </h4>
+          <p class="popup-vin__info-characteristics-item-meaning">
+            Седан, 4
+          </p>
+        </div>
+
+        <div class="popup-vin__info-characteristics-item">
+          <h4 class="popup-vin__info-characteristics-item-title">
+            Двигатель
+          </h4>
+          <p class="popup-vin__info-characteristics-item-meaning">
+            1.6 л / 156 л.с.
+          </p>
+        </div>
+
+        <div class="popup-vin__info-characteristics-item">
+          <h4 class="popup-vin__info-characteristics-item-title">
+            Год выпуска
+          </h4>
+          <p class="popup-vin__info-characteristics-item-meaning">
+            2021
+          </p>
+        </div>
+
+        <div class="popup-vin__info-characteristics-item">
+          <h4 class="popup-vin__info-characteristics-item-title">
+            Цвет кузова
+          </h4>
+          <p class="popup-vin__info-characteristics-item-meaning">
+            Белый
+          </p>
+        </div>
+
+        <div class="popup-vin__info-characteristics-item">
+          <h4 class="popup-vin__info-characteristics-item-title">
+            Последний пробег
+          </h4>
+          <p class="popup-vin__info-characteristics-item-meaning">
+            183 000 км
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="popup-vin__info-vin">
+      <div class="popup-vin__info-vin-head">
+        <h5 class="popup-vin__info-vin-head-title">
+          Юридическая чистота
+        </h5>
+      </div>
+      <div class="popup-vin__info-vin-inner">
+
+        <div class="popup-vin__info-vin-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 6L9 17L4 12" stroke="#DC4729" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="popup-vin__info-vin-item-contects">
+            <h6 class="popup-vin__info-vin-item-contects-title">
+              Юридическая проверка
+            </h6>
+            <p class="popup-vin__info-vin-item-contects-subtitle">
+              Ограничения на регистрационные
+              действия: не обнаружены
+            </p>
+          </div> 
+        </div>
+
+        <div class="popup-vin__info-vin-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 6L9 17L4 12" stroke="#DC4729" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="popup-vin__info-vin-item-contects">
+            <h6 class="popup-vin__info-vin-item-contects-title">
+              Владельцы по ПТС
+            </h6>
+            <p class="popup-vin__info-vin-item-contects-subtitle">
+              2 владельца
+            </p>
+          </div> 
+        </div>
+
+       
+
+        <div class="popup-vin__info-vin-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 6L9 17L4 12" stroke="#DC4729" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="popup-vin__info-vin-item-contects">
+            <h6 class="popup-vin__info-vin-item-contects-title">
+              Нахождение авто в залоге
+            </h6>
+            <p class="popup-vin__info-vin-item-contects-subtitle">
+              Сведения о нахождении в залоге: не обнаружены
+          </div> 
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="popup-vin__info-vin">
+      <div class="popup-vin__info-vin-head">
+        <h5 class="popup-vin__info-vin-head-title">
+          Владельцы по ПТС
+        </h5>
+      </div>
+      <div class="popup-vin__info-vin-inner">
+
+        <div class="popup-vin__info-vin-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 6L9 17L4 12" stroke="#DC4729" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="popup-vin__info-vin-item-contects">
+            <h6 class="popup-vin__info-vin-item-contects-title">
+              Владельцы по ПТС
+            </h6>
+            <p class="popup-vin__info-vin-item-contects-subtitle">
+              2 владельца
+            </p>
+          </div> 
+        </div>
+
+        <div class="popup-vin__info-vin-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 6L9 17L4 12" stroke="#DC4729" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="popup-vin__info-vin-item-contects">
+            <h6 class="popup-vin__info-vin-item-contects-title">
+              Использование в такси
+            </h6>
+            <p class="popup-vin__info-vin-item-contects-subtitle">
+              Сведения об использовании в такси: не обнаружены
+          </div> 
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="popup-vin__info-price">
+
+      <div class="popup-vin__info-price-sum">
+        <div class="popup-vin__info-price-actual">
+          <h4 class="popup-vin__info-price-actual-sum">
+            от 17 800 000 ₽
+          </h4>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M9.09 9C9.3251 8.33167 9.78915 7.76811 10.4 7.40913C11.0108 7.05016 11.7289 6.91894 12.4272 7.03871C13.1255 7.15849 13.7588 7.52152 14.2151 8.06353C14.6713 8.60553 14.9211 9.29152 14.92 10C14.92 12 11.92 13 11.92 13M12 17H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+              stroke="#0E0E0E" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <div class="price-popup">
+            <div class="price-popup-top">
+              <p>Цена с учетом максимальной выгоды:</p>
+              <p>Скидка за Trade-in: <span>- 800 000 ₽</span></p>
+              <p>Скидка за кредит:  <span>- 600 000 ₽</span></p>
+              <p>Специальная скидка месяца:  <span>- 600 000 ₽</span></p>
+            </div>
+            <div class="price-popup-bottom">
+              <p>Минимально возможная стоимость
+                при покупке за наличные:  <span>4 800 000 ₽ </span></p>
+            </div>
+          </div>
+        </div>
+        <p class="popup-vin__info-price-old">
+            от 17 800 000 ₽
+        </p>
+      </div>
+
+      <div class="popup-vin__info-price-buttons">
+        <button class="detal-header__top-trade-in detal-header__top--btn">
+          Trade-in
+        </button>
+        <button class="detal-header__top-reservation detal-header__top--btn">
+          Забронировать
+        </button>
+        <button class="detal-header__top-credit detal-header__top--btn">
+          В кредит от 236 094 ₽/мес
+        </button>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="detal-new__prices-mobil">
+
+      <div class="detal-new__prices-mobil-top">
+
+        <div class="detal-header__top-price">
+          <p class="detal-header__top-price-old">
+            от 17 800 000 ₽
+          </p>
+          <div class="detal-header__top-price-actual">
+            <h4 class="detal-header__top-price-actual-sum">
+              от 17 800 000 ₽
+            </h4>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9.09 9C9.3251 8.33167 9.78915 7.76811 10.4 7.40913C11.0108 7.05016 11.7289 6.91894 12.4272 7.03871C13.1255 7.15849 13.7588 7.52152 14.2151 8.06353C14.6713 8.60553 14.9211 9.29152 14.92 10C14.92 12 11.92 13 11.92 13M12 17H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                stroke="#0E0E0E" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <div class="price-popup price-popup">
+              <div class="price-popup-top">
+                <p>Цена с учетом максимальной выгоды:</p>
+                <p>Скидка за Trade-in: <span>- 800 000 ₽</span></p>
+                <p>Скидка за кредит:  <span>- 600 000 ₽</span></p>
+                <p>Специальная скидка месяца:  <span>- 600 000 ₽</span></p>
+              </div>
+              <div class="price-popup-bottom">
+                <p>Минимально возможная стоимость
+                  при покупке за наличные:  <span>4 800 000 ₽ </span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="detal-header__top-credit detal-header__top--btn">
+          В кредит от 236 094 ₽/мес
+        </button>
+
+      </div>
+
+      <div class="detal-new__prices-mobil-buttons">
+
+        <button class="detal-header__top-trade-in detal-header__top--btn">
+          Trade-in
+        </button>
+
+        <button class="detal-header__top-reservation detal-header__top--btn detal-header__top-reservation-vin">
+          Забронировать
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+</div>
+
+</div>
+    </div>  
+ 
+    <script src="js/libs.min.js?_v=20241108165328"></script>
+    <script src="js/app.min.js?_v=20241108165328"></script>
+  </body>
+</html>

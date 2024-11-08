@@ -22,14 +22,14 @@
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <link rel="apple-touch-icon" href="images/favicon.png">
 
-
+ 
   <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap&_v=20241105141546" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap&_v=20241108165328" rel="stylesheet"> -->
 
-
-  <link rel="stylesheet" href="css/style.min.css?_v=20241105141546">
-  <link rel="stylesheet" href="css/libs.min.css?_v=20241105141546">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css?_v=20241108165328" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20241108165328">
+  <link rel="stylesheet" href="css/libs.min.css?_v=20241108165328">
 </head>
   <body>
 
@@ -108,15 +108,52 @@
 
 </header>
       <main class="main">
-        <section class="baner">
-  <div class="baner__background" data-desktop="images/j/baner-stock.jpg"
-                                data-mobile="images/j/baner-stock-mobil.jpg">
+        <section class="baner stock-baner stock-baner-main">
+  <div class="baner__background lazy-load lazy background-load" style="background-image: url('images/lazy-load-min.jpg'); " 
+    data-bg-desktop="images/j/ranson-baner.jpg"
+    data-bg-mobile="images/j/ranson-baner-mobil.jpg">
+    <div class="detal-breadcrumbs">
+
+
+      <div class="container">
+        <nav class="detal-breadcrumbs__nav">
+          <ul>
+            <li><a href="#">Главная</a></li>
+            <li class="detal-breadcrumbs__nav-separator">
+              <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="2" cy="2" r="2" fill="#DDE3EE" />
+              </svg>
+    
+    
+    
+            </li>
+            <li><a href="#">Новые авто</a></li>
+    
+            <li class="detal-breadcrumbs__nav-separator">
+              <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="2" cy="2" r="2" fill="#DDE3EE" />
+              </svg>
+    
+            </li>
+            <li><a href="#">Chery</a></li>
+            <li class="detal-breadcrumbs__nav-separator">
+              <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="2" cy="2" r="2" fill="#DDE3EE" />
+              </svg>
+    
+            </li>
+            <li>Chery Tiggo</li>
+          </ul>
+        </nav>
+      </div>
+    
+    </div>
   <div class="container">
-    <div class="baner__window">
-      <h1 class="baner__window-title">
-        Актуальные акции и спецпредложения
+    <div class="baner__services">
+      <h1 class="baner__services-title">
+        Снижаем цены до конца месяца на все модели Chery
       </h1>
-      <p class="baner__window-text">
+      <p class="baner__services-subtitle">
         Сделайте покупку нового автомобиля более выгодно, используя акционные условия нашего автосалона
       </p>
     </div>
@@ -1358,6 +1395,7 @@
 <div class="compare-popup">
   <div class="compare-popup__wrap">
   <div class="compare-popup__head">
+    <div class="compare-popup__head-top">
     <h6 class="compare-popup__head-title">
       Добавлено к сравнению
     </h6>
@@ -1367,9 +1405,11 @@
       </svg> 
     </div>
   </div>
+  
   <p class="compare-popup__text">
    <span class="compare-popup__text-sum">2</span>  автомобиля
   </p>
+</div>
   <div class="compare-popup__buttons">
     <button class="compare-popup__btn">
       Сравнить выбранные
@@ -1710,7 +1750,7 @@
 </div>
     </div>  
  
-    <script src="js/libs.min.js?_v=20241105141546"></script>
-    <script src="js/app.min.js?_v=20241105141546"></script>
+    <script src="js/libs.min.js?_v=20241108165328"></script>
+    <script src="js/app.min.js?_v=20241108165328"></script>
   </body>
 </html>

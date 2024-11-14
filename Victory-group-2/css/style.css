@@ -8905,6 +8905,19 @@ h2 {
   font-weight: 400;
   line-height: 24px !important;
   color: #66707C !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.new-cars__filter-bottom-select--brand {
+  max-width: 50%;
+}
+
+.new-cars__filter-bottom-select--model {
+  max-width: 50%;
 }
 
 .new-cars__filter-tabs--item .select2-selection__clear {
@@ -8912,7 +8925,7 @@ h2 {
 }
 
 .new-cars__filter-tabs--item .select2-selection__arrow {
-  position: static !important;
+  top: 25% !important;
 }
 
 .new-cars__filter-tabs--item .select2-container--default .select2-selection--single .select2-selection__arrow b {

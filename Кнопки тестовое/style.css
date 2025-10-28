@@ -1,0 +1,172 @@
+:root {
+  --accent: #035cbe;
+  --accent-hover: #d1def1;
+  --accent-active: #CCE0FF;
+  --error: #EB5A46;
+  --border: #DDE1E6;
+  --bg: #FFFFFF;
+  --disabled-bg: #e2e3e4;
+  --disabled-text: #C0C4CC;
+  --text: #2D2F33;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: #F7F9FB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.spinner {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  color: var(--text);
+}
+
+
+.spinner__control {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.15s ease;
+}
+
+
+.spinner__button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--text);
+  transition: all 0.15s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none
+}
+
+.spinner__button:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+.spinner__control:has(.spinner__button:hover) {
+  border-color: #bac2cb;
+}
+
+.spinner__button:active:not(:disabled) {
+  color: rgba(0, 0, 0, 0.546);
+}
+
+.spinner__button:disabled {
+  color: var(--disabled-text);
+  cursor: not-allowed;
+}
+
+
+.spinner__input {
+  width: 30px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  background: transparent;
+  outline: none;
+  color: var(--text);
+}
+
+
+.spinner__check {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--disabled-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.spinner__check:hover {
+  background: var(--accent-hover);
+}
+
+.spinner__check-icon {
+  width: 15px;
+  height: 15px;
+  stroke: #9CA3AF;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  transition: all 0.15s ease;
+}
+
+/* --- checked --- */
+.spinner--checked .spinner__check {
+  background: var(--accent-hover);
+}
+
+.spinner--checked .spinner__check-icon {
+  stroke: var(--accent);
+}
+
+/* --- error state --- */
+.spinner--error .spinner__control {
+  border-color: var(--error);
+}
+.spinner--error .spinner__button:hover:not(:disabled) {
+  background: #FFE9E9;
+  color: var(--error);
+}
+
+.spinner--disabled {
+  pointer-events: none;
+}
+
+.spinner--disabled .spinner__button,
+.spinner--disabled .spinner__input,
+.spinner--disabled .spinner__check {
+  background: var(--disabled-bg);
+  color: var(--disabled-text);
+  cursor: not-allowed;
+}
+
+.spinner--disabled .spinner__control {
+  border-color: var(--disabled-bg);
+  background: var(--disabled-bg);
+}
+
+@media (max-width: 768px) {
+  .spinner__button {
+    width: 26px;
+    height: 26px;
+    font-size: 16px;
+  }
+
+  .spinner__input {
+    width: 26px;
+    font-size: 12px;
+  }
+
+  .spinner__check {
+    width: 26px;
+    height: 26px;
+  }
+
+  .spinner__check-icon {
+    width: 13px;
+    height: 13px;
+  }
+}
